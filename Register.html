@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/futura-pt');
+    *{font-family: Futura-PT, sans-serif;}
+    body {
+      background: url("/img/background.jpg");
+      background-size: auto;
+      background-position: center;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      max-width: 400px;
+      margin: 50px auto;
+      border-radius: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background: url("/img/register.png") no-repeat center;
+      background-size: contain;
+      width: 150px;
+      height: 50px;
+      border: none;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+    }
+    input[type="submit"]:hover {
+      opacity: 0.8;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+<form
+  action="https://formspree.io/f/xyyabzoq"
+  method="POST" onsubmit="return validateForm()">
+  <h1>Register</h1>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <input type="submit" value="">
+</form>
+
+<script>
+  function validateForm() {
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var password = document.getElementById("password").value;
+
+    var emailRegex = /\S+@\S+\.\S+/;
+    var phoneRegex = /^\d{10}$/;
+    var passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    if (!emailRegex.test(email)) {
+      alert("Invalid email format. Please enter a valid email address.");
+      return false;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      alert("Invalid phone number. Please enter a 10-digit phone number.");
+      return false;
+    }
+
+    if (!passwordRegex.test(password)) {
+      alert("Invalid password format. Password must contain at least 8 characters, one capital letter, and one number.");
+      return false;
+    }
+
+    return true;
+  }
+</script>
+</body>
+</html>
