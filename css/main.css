@@ -508,9 +508,11 @@ header ul.menu li a:hover {
 
   .middle-general-container {
     height: auto;
-    min-height: 70vh;
+    max-height: 70vh;
     position: fixed;
+    flex-direction: column;
     width: calc(100% - 4rem);
+    overflow-y: scroll;
   }
 
   .parent {
