@@ -387,9 +387,10 @@ header {
   border-bottom-color: rgba(255, 255, 255, 0.2);
 }
 
-header .logo {
-  logo-image: url("/img/logo_rotund.png");
-
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 header ul.menu {
@@ -406,14 +407,14 @@ header ul.menu li a {
   font-weight: 700;
   color: #2d5328;
   text-shadow: 1px 1px 3px #5d8656;
-  padding: 7px 13px;
+  padding: 7px 10px;
   border-radius: 20px;
   background: rgba(255,255,255,0.4);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   transition: background 0.1s ease-in-out;
-  width: 100%;
+  max-width: 100%;
 }
 
 header ul.menu li a:hover {
@@ -454,11 +455,25 @@ header ul.menu li a:hover {
 }
 
 @media only screen and (max-width: 620px) {
+  .logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
   header {
     position: fixed;
     top: 5vh;
     width: calc(100% - 4rem);
+    text-align: center;
+    padding: 10px;
+    min-height: 8vh;
   }
+
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+  /*text-align: center;*/
+  /*padding: 10px;*/
 
   header ul.menu {
     display: flex;
@@ -469,7 +484,7 @@ header ul.menu li a:hover {
   header ul.menu li {
     width: 100%;
     text-align: center;
-    margin: 0px 10px;
+    margin: 0px 5px;
   }
 
   header ul.menu li a {
