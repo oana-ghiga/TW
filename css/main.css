@@ -308,8 +308,15 @@ body {
 }
 .image-container {
   position: relative;
+  text-align: center;
+  color: white;
+  font-size: 0.7rem;
 }
 
+.image-container img {
+  max-width: 80%;
+  justify-content: center;
+}
 
 .popup {
   display: none;
@@ -324,10 +331,6 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.image-container {
-  position: relative;
-  cursor: pointer;
-}
 .popup-show {
   display: block;
 }
@@ -374,14 +377,15 @@ header {
   z-index: 9999;
   position: fixed;
   top: 10vh;
-  max-width: calc(100vh - 180px);
-  padding: 20px 50px;
+  width: 80vw;
+  max-height: 10vw;
+  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  border-radius: 2rem;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom-color: rgba(255, 255, 255, 0.2);
@@ -390,7 +394,6 @@ header {
 .logo {
   width: 40px;
   height: 40px;
-  margin-right: 10px;
 }
 
 header ul.menu {
@@ -454,7 +457,7 @@ header ul.menu li a:hover {
   grid-area: 3 / 1 / 4 / 7;
 }
 
-@media only screen and (max-width: 620px) {
+@media screen and (max-width: 620px) {
   .logo {
     width: 30px;
     height: 30px;
@@ -484,7 +487,8 @@ header ul.menu li a:hover {
   header ul.menu li {
     width: 100%;
     text-align: center;
-    margin: 0px 5px;
+    margin: 0px 0.3rem;
+
   }
 
   header ul.menu li a {
@@ -492,7 +496,7 @@ header ul.menu li a:hover {
     font-weight: 700;
     color: #2d5328;
     text-shadow: 1px 1px 3px #5d8656;
-    padding: 7px 13px;
+    padding: 0.2rem 0.7rem;
     border-radius: 20px;
     background: rgba(255,255,255,0.4);
     border: 1px solid rgba(255, 255, 255, 0.6);
