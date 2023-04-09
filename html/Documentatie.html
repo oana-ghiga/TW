@@ -1,139 +1,427 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="keywords" content="project, web, plante, ierbar">
   <title>HeMa - Scholarly</title>
-<!--  <link rel="stylesheet" href="css/scholarly.min.css"> future css?-->
-<!--  <link> future logo?-->
+  <link rel="stylesheet" href="../css/scholarly.css">
+  <!--  <link> future logo?-->
 </head>
 
 <body prefix="schema: http://schema.org/# sa: https://ns.science.ai/" itemscope itemtype="http://schema.org/WebPage">
-  <div id="articleContent" itemscope itemtype="http://schema.org/WebPage">
-    <article resource="#" typeof="schema:ScholarlyArticle">
-      <header>
-        <h1>HeMa - Digital Herbarium</h1>
-      </header>
-<!--      future content div heree ------------------------------------------->
-      <section id="authors" typeof="sa:AuthorsList">
-        <div role="contentinfo">
-          <h2>Autori:</h2>
-          <ul>
-            <li typeof="sa:ContributorRole" property="schema:author">
+<div id="articleContent" itemscope itemtype="http://schema.org/WebPage">
+  <article resource="#" typeof="schema:ScholarlyArticle">
+    <header>
+      <h1>HeMa - Digital Herbarium</h1>
+    </header>
+    <!--      future content div heree ------------------------------------------->
+    <section id="authors" typeof="sa:AuthorsList">
+      <div role="contentinfo">
+        <h2>Authors:</h2>
+        <ul>
+          <li typeof="sa:ContributorRole" property="schema:author">
                 <span typeof="schema:Person">
-                    <meta property="schema:familyName" content="Bilba" />
-                    <meta property="schema:givenName" content="Adrian" />
-                    <meta property="schema:additionalName" content="Paul" />
+                    <meta property="schema:familyName" content="Bilba"/>
+                    <meta property="schema:givenName" content="Adrian"/>
+                    <meta property="schema:additionalName" content="Paul"/>
                     <span property="schema:name">
                       Bilba Adrian-Paul
                     </span>
                     <a href="https://www.github.com/badrean" itemprop="url">/GitHub</a>
                 </span>
-            </li>
-            <li typeof="sa:ContributorRole" property="schema:author">
+          </li>
+          <li typeof="sa:ContributorRole" property="schema:author">
                 <span typeof="schema:Person">
-                    <meta property="schema:familyName" content="Ghiga" />
-                    <meta property="schema:givenName" content="Oana" />
-                    <meta property="schema:additionalName" content="Maria" />
+                    <meta property="schema:familyName" content="Ghiga"/>
+                    <meta property="schema:givenName" content="Oana"/>
+                    <meta property="schema:additionalName" content="Maria"/>
                     <span property="schema:name">
                       Ghiga Oana Maria
                     </span>
                     <a href="https://www.github.com/oana-ghiga" itemprop="url">/GitHub</a>
                 </span>
-            </li>
-            <li typeof="sa:ContributorRole" property="schema:author">
+          </li>
+          <li typeof="sa:ContributorRole" property="schema:author">
                 <span typeof="schema:Person">
-                    <meta property="schema:familyName" content="Roman" />
-                    <meta property="schema:givenName" content="Lidia" />
-                    <meta property="schema:additionalName" content="Lavinia" />
+                    <meta property="schema:familyName" content="Roman"/>
+                    <meta property="schema:givenName" content="Lidia"/>
+                    <meta property="schema:additionalName" content="Lavinia"/>
                     <span property="schema:name">
                       Roman Lidia Lavinia
                     </span>
                     <a href="https://www.github.com/lavinia103" itemprop="url">/GitHub</a>
                 </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section type="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>1. Abstract</h2>
+      <p>
+        The Digital Herbarium is an online collection of documented plant specimens for scientific research and
+        education. The Digital Herbarium Website brings this collection online and accessible to
+        anyone worldwide. Users can learn about plant characteristics, habitats, uses, and discover new species.
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <h2>2. Introduction</h2>
+      <h3>2.1 Purpose</h3>
+      <p>
+        The purpose of the Digital Herbarium Website is to provide an online platform for learning about
+        plants and their attributes. The website aims to make a vast collection of plant specimens easily accessible to
+        users from anywhere in the world, along with their detailed information and photographs. It aims to support
+        scientific research, educational purposes, and general interest in botany and plant sciences. By providing a
+        rich
+        collection of plant species, users can learn about their characteristics, habitats, and uses. Moreover, the
+        platform may also allow users to contribute their observations and comments on plants, thereby expanding the
+        knowledge and understanding of the plant world. In summary, the purpose of the Digital Herbarium Website is to
+        facilitate learning and promote awareness of the importance of plants in our ecosystem.
+      </p>
+      <h3>2.2 Document Conventions</h3>
+      <ul>
+        <li>
+          This document follows the <cite property="schema:citation"><a
+          href="https://github.com/rick4470/IEEE-SRS-Tempate#readme">IEEE
+          System Requirements Specification Template</a></cite>,
+        </li>
+        <li>
+          Headings and subheadings: Headings and subheadings are numbered and use a bold font,
+        </li>
+        <li>
+          References: All references cited in the document are listed in the References section and will be written with
+          italic font.
+        </li>
+      </ul>
+      <h3>2.3 Intended Audience and Reading Suggestions</h3>
+      <p>
+        The intended audience of this document includes the development team responsible for building and implementing
+        the Digital Herbarium Website, as well as anyone interested in understanding the requirements for the website's
+        development and implementation. It is recommended that readers have a basic understanding of web development
+        concepts, botany, and plant sciences to fully comprehend the requirements presented in this document.
+      </p>
+      <h3>2.4 Product Scope</h3>
+      <p>
+        The scope of this document is to provide a detailed description of the requirements for the development and
+        implementation of the Digital Herbarium Website. This platform is designed to provide support for users
+        interested in learning about plants and their attributes. The website aims to bring an online collection of
+        plant specimens, carefully documented, photographed, and stored for scientific research and educational
+        purposes, and make it accessible to users worldwide.
+      </p>
+      <h3>2.5 References</h3>
+      <ol>
+        <li typeof="schema:WebPage" role="doc-biblioentry"
+            resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html"
+            property="schema:citation">
+          <cite property="schema:name">
+            <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html">
+              Web Technologies Course Page
+            </a>
+          </cite>, by
+          <span property="schema:author" typeof="schema:Person">
+            <span property="schema:givenName">Sabin</span>
+            <span property="schema:additionalName">Corneliu</span>
+            <span property="schema:familyName">Buraga</span>
+          </span>
+        </li>
+        <li typeof="schema:WebPage" role="doc-biblioentry"
+            resource="https://github.com/rick4470/IEEE-SRS-Tempate#readme"
+            property="schema:citation">
+          <cite property="schema:name">
+            <a href="https://github.com/rick4470/IEEE-SRS-Tempate#readme">
+              IEEE-SRS-Template
+            </a>
+          </cite>, by
+          <span property="schema:author" typeof="schema:Person">
+            <span property="schema:givenName">Rick</span>
+            <span property="schema:familyName">H.</span>
+          </span>
+        </li>
+        <li typeof="schema:WebPage" role="doc-biblioentry"
+            resource="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html"
+            property="schema:citation">
+          <cite property="schema:name">
+            <a href="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html">
+              What is Scholarly HTML?
+            </a>
+          </cite>, by
+          <span property="schema:author" typeof="schema:Person">
+            <span property="schema:givenName">Robin</span>
+            <span property="schema:familyName">Berjon</span>
+            &
+            <span property="schema:givenName">Sebastien</span>
+            <span property="schema:familyName">Ballesteros</span>
+          </span>
+        </li>
+        <li typeof="schema:WebPage" role="doc-biblioentry"
+            resource="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html"
+            property="schema:citation">
+          <cite property="schema:name">
+            <a href="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html">
+              Scholarly HTML Guide
+            </a>
+          </cite>, by
+          <span property="schema:author" typeof="schema:Person">
+            <span property="schema:givenName">Tzviya</span>
+            <span property="schema:familyName">Siegman</span>
+            &
+            <span property="schema:givenName">Robin</span>
+            <span property="schema:familyName">Berjon</span>
+          </span>
+        </li>
+        <li typeof="schema:WebPage" role="doc-biblioentry"
+            resource="https://schema.org"
+            property="schema:citation">
+          <cite property="schema:name">
+            <a href="https://schema.org">
+              Schema.org
+            </a>
+          </cite>
+          <ul>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Dan</span>
+                <span property="schema:familyName">Brickley</span>
+                ,
+              </span>
+            </li>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Stéphane</span>
+                <span property="schema:familyName">Corlosquet</span>
+                ,
+              </span>
+            </li>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Jason</span>
+                <span property="schema:familyName">Douglas</span>
+                ,
+              </span>
+            </li>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Sam</span>
+                <span property="schema:familyName">Goto</span>
+                ,
+              </span>
+            </li>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Vicki</span>
+                <span property="schema:familyName">Tardif</span>
+                ,
+              </span>
+            </li>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Martin</span>
+                <span property="schema:familyName">Hepp</span>
+                ,
+              </span>
+            </li>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Charlie</span>
+                <span property="schema:familyName">Jiang</span>
+                ,
+              </span>
+            </li>
+            <li>
+              <span property="schema:author" typeof="schema:Person">
+                <span property="schema:givenName">Jason</span>
+                <span property="schema:familyName">Johnson</span>
+                ,
+              </span>
+            </li>
+            <li>
+              many other individuals that have contributed to schema.org discussions, proposals and schemas.
             </li>
           </ul>
-        </div>
-      </section>
-      <section type="sa:Abstract">
-        <div role="doc-abstract">
-          <p>
-            The Digital Herbarium Website is an online platform that aims to assist users in gaining knowledge about
-            plants and their characteristics.
-          </p>
-        </div>
-      </section>
-    </article>
-  </div>
+        </li>
+      </ol>
+    </section>
+    <section typeof="sa:MaterialsAndMethods">
+      <h2>3. Overall Description</h2>
+      <h3>3.1 Product Perspective</h3>
+      <p>
+        The Digital Herbarium Website is a university project designed to showcase the potential of online plant
+        specimen collections for research and educational purposes. The website will be developed as a standalone
+        application, primarily for demonstration purposes, and will not be integrated with any other software systems.
+      </p>
+      <h3>3.2 Product Functions</h3>
+      <p>
+        The website offers a range of functions and features that enable users to interact with the
+        plant collection in various ways. Users can create personalized albums for plants, save plants in those
+        albums, and add comments for plants. Additionally, users can create an account and log in to access their albums
+        and comments from any device. The home page of the web app is composed of a variety of plant photos that
+        users can click to reveal detailed descriptions and comment sections for each plant. The system also generates
+        thematic albums for users, such as medicinal plants, mountain plants, and others. Users can search plants and
+        filter their main page feed based on different categories, such as medicinal plants, mountain plants, and other
+        themes. Overall, the system is designed to facilitate the exploration and learning of plant attributes and
+        characteristics for users with different levels of expertise and interests.
+      </p>
+      <h3>3.3 User Classes and Characteristics</h3>
+      <p>
+        The Digital Herbarium Website is designed to accommodate a variety of user classes with different levels of
+        expertise and interests in plants. The primary user classes are students, researchers, and plant enthusiasts.
+        The Digital Herbarium Website is designed to accommodate a variety of user classes with different levels of
+        expertise and interests in plants. The primary user classes are students, researchers, and plant enthusiasts.
+      </p>
+      <h3>3.4 Operating Environment</h3>
+      <p>
+        The Digital Herbarium Website will be a web-based application that can be accessed from any modern web browser
+        on a desktop, laptop, tablet, or mobile device. The application will be designed to be compatible with commonly
+        used web technologies, such as HTML5, CSS, JavaScript and NodeJS.
+      </p>
+      <h3>3.5 Operating Environment</h3>
+      <p>
+        The following constraints apply to the design and implementation of the Digital Herbarium Website:
+      </p>
+      <ul>
+        <li>
+          The website must be designed and implemented using HTML, CSS, JavaScript, NodeJS and MySQL Database technology
+        </li>
+        <li>
+          The website must be compatible with modern web browsers such as Google Chrome, Mozilla Firefox, and Safari,
+        </li>
+        <li>
+          The website must be designed to be responsive and adaptable to different screen sizes, including desktop and
+          mobile devices,
+        </li>
+      </ul>
+      <h3>3.6 User Documentation</h3>
+      <p>
+        The user will have a user guide on how to use the web application.
+      </p>
+      <h3>3.7 Assumptions and Dependencies</h3>
+      <ul>
+        <li>
+          The web application assumes that users have a basic understanding of how to use a web browser and have access
+          to an internet connection,
+        </li>
+        <li>
+          The application needs a browser that supports HTML5, CSS, JavaScript and NodeJS.
+        </li>
+      </ul>
+    </section>
+    <section typeof="sa:MateialsAndMethods">
+      <h2>4. External Interface Requirements</h2>
+      <h3>4.1 User Interfaces</h3>
+      <!--    TO BE ADDED ONCE WE HAVE THEM-->
+      <h3>4.2 Hardware Interfaces</h3>
+      <!--      Aici adaugam cum o sa arate pe telefon pagina principala-->
+      <h3>4.3 Software Interfaces</h3>
+      <p>
+        The application will communicate directly with a MySQL database, with the assistance of
+        JavaScript and NodeJS, for adding and extracting information about users and plants.
+      </p>
+      <h3>4.4 Communication Interfaces</h3>
+      <p>The Digital Herbarium Website will use HTTP protocol.</p>
+    </section>
+    <section typeof="sa:MaterialsAndMethods">
+      <h2>5. System Features</h2>
+      <h3>5.1 Registration Form</h3>
+      <p>The system shall provide a registration form for users to create an account.</p>
+      <h3>5.2 Filtered Search</h3>
+      <p>The system shall allow users to search and filter the main page feed based on various criteria such as plant
+        name, category, and tags.</p>
+      <h3>5.3 Album Recommendation</h3>
+      <p>The system shall generate and recommend thematic albums to users based on the user's plant collection and
+        search history.</p>
+      <h3>5.4 Album Creation</h3>
+      <p>The system shall allow users to create custom albums for their plant collections.</p>
+      <h3>5.5 Adding Plant to Album</h3>
+      <p>The system shall allow users to add plants to their custom albums.</p>
+      <h3>5.6 Add Plant Comment</h3>
+      <p>The system shall allow users to add comments for plants and view comments from other users.</p>
+      <h3>5.7 Top Most Collected Plants</h3>
+      <p>The system shall provide a feature to display the most collected plants by users in a separate section of the
+        main page feed.</p>
+      <h3>5.8 Adaugare plante???</h3>
+    </section>
+    <section typeof="sa:MaterialsAndMethods">
+      <h2>6. Other Nonfunctional Requirements</h2>
+      <h3>6.1 Performance Requirements</h3>
+      <p>
+        The web application must be able to handle a large number of simultaneous user requests, with minimal response
+        time for searching, browsing, and displaying plant information.
+      </p>
+      <h3>6.2 Safety Requirements</h3>
+      <p>
+        The app must provide accurate information on plants to ensure the safe use of plants and prevent any harm to
+        users.
+      </p>
+      <h3>6.3 Security Requirements</h3>
+      <p>
+        The system must provide secure user authentication and session management. Passwords must be encrypted and
+        stored securely.
+      </p>
+      <h3>6.4 Software Quality Attributes</h3>
+      <p>
+        The app should have robust security measures in place to protect user data and prevent unauthorized access. The
+        app should have fast response times, to ensure that users can quickly access the information they need. The app
+        should have a user-friendly interface, with clear and intuitive navigation, to ensure ease of use for all users.
+      </p>
+      <h3>6.5 Business Rules</h3>
+      <p>
+        The app must not promote or endorse the consumption or use of illegal or harmful plants or products. The app
+        must provide reliable and up-to-date information about plants and their characteristics, uses, and risks. Users
+        must register and log in to create and manage their albums, add comments, and access personalized
+        recommendations.
+      </p>
+    </section>
+    <section typeof="sa:MaterialsAndMethods">
+      <h2>7. Other Requirements</h2>
+      <h3>A MySQL database used to store user account details, plants, saved albums and comments.</h3>
+    </section>
+    <section typeof="sa:ReferenceList">
+      <h2>Bibliography</h2>
+      <ol>
+        <li typeof="schema:WebPage"
+            resource="https://www.w3schools.com">
+          <a href="https://www.w3schools.com">
+            HTML, CSS, JavaScript, NodeJS
+          </a>
+        </li>
+        <li typeof="schema:WebPage"
+            resource="https://victorvlad19.github.io/web/proiecte/">
+          <a href="https://victorvlad19.github.io/web/proiecte/">
+            Projects Page
+          </a>
+        </li>
+        <li typeof="schema:WebPage"
+            resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html">
+          <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html">
+            Web Technologies Course Page
+          </a>
+        </li>
+        <li typeof="schema:WebPage"
+            resource="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html">
+          <a href="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html"">
+            What is Scholarly HTML?
+          </a>
+        </li>
+        <li typeof="schema:WebPage"
+            resource="https://github.com/rick4470/IEEE-SRS-Tempate#readme">
+          <a href="https://github.com/rick4470/IEEE-SRS-Tempate#readme">
+            IEEE System Requirements Specification Template
+          </a>
+        </li>
+        <li typeof="schema:WebPage"
+            resource="https://w3c.github.io/scholarly-html/#structure">
+          <a href="https://w3c.github.io/scholarly-html/#structure">
+            Scholarly HTML Guide
+          </a>
+        </li>
+        <li typeof="schema:WebPage"
+            resource="https://schema.org">
+          <a href="https://schema.org">
+            Schema.org
+          </a>
+        </li>
+      </ol>
+    </section>
+  </article>
+</div>
 </body>
-<!--    <header>-->
-<!--        <h1>HeMa - Digital Herbarium</h1>-->
-<!--    </header>-->
-
-<!--    <div role="contentinfo">-->
-<!--        <dl>-->
-<!--            <dt>Authors</dt>-->
-<!--            <dd>-->
-<!--                Bilba Adrian-Paul-->
-<!--                &amp;-->
-<!--                Ghiga Oana-Maria-->
-<!--                &amp;-->
-<!--                Roman Lidia-Lavinia-->
-<!--            </dd>-->
-<!--          </dl>-->
-<!--    </div>-->
-
-<!--    <h2>1. Introduction</h2>-->
-<!--    <p>The Digital Herbarium Website is a web-based platform designed to provide support for users interested in-->
-<!--        learning about plants and their attributes. The purpose of this System Requirements Specification is to provide-->
-<!--        a detailed description of the requirements for the website's development and implementation.</p>-->
-
-<!--    <h3>1.1 Purpose</h3>-->
-<!--    <p>The purpose of the Digital Herbarium Website is to allow users to organize collections of graphic representations-->
-<!--        of plants and their attributes. Users will be able to get recommendations based on their preferences and filter-->
-<!--        the photos on the newsfeed based on attributes filters. The users can also create their own albums.</p>-->
-
-<!--    <h3>1.2 Scope</h3>-->
-<!--    <p>The Digital Herbarium Website will be a web-based platform accessible via a web browser. The website's primary-->
-<!--        functionality will be organizing collections of graphic representations of plants and their attributes. The-->
-<!--        website will have a simple and user-friendly design, with a focus on earthly colors and the use of Helvetica as-->
-<!--        the main font.</p>-->
-
-<!--    <h3>1.3 Definitions, Acronyms, and Abbreviations</h3>-->
-<!--    <ul>-->
-<!--        <li>IEEE - Institute of Electrical and Electronics Engineers</li>-->
-<!--        <li>RSS - Really Simple Syndication</li>-->
-<!--    </ul>-->
-
-<!--    <h3>1.4 References</h3>-->
-<!--    <ul>-->
-<!--        <li>IEEE Std 830-1998, IEEE Recommended Practice for Software Requirements Specifications</li>-->
-<!--    </ul>-->
-
-<!--    <h2>2. Overall Description</h2>-->
-<!--    <p>The Digital Herbarium Website will be a web-based platform accessible via a web browser. The website's primary-->
-<!--        functionality will be organizing collections of graphic representations of plants and their attributes. The-->
-<!--        website will have a simple and user-friendly design, with a focus on earthly colors and the use of Helvetica as-->
-<!--        the main font. The website's functionality includes a search function, the ability to save plants on existing-->
-<!--        albums or create new albums, and the ability to add comments on plants. The website will generate different-->
-<!--        statistics and a top of the most popular plants available as a RSS feed.</p>-->
-
-<!--    <h3>2.1 User Classes and Characteristics</h3>-->
-<!--    <p>The Digital Herbarium Website will target users interested in learning about plants and their attributes. Users-->
-<!--        will be able to create an account and personalize their experience based on their preferences. The website's-->
-<!--        users will have varying levels of technical expertise, ranging from novice to advanced.</p>-->
-
-<!--    <h3>2.2 Operating Environment</h3>-->
-<!--    <p>The Digital Herbarium Website will be a web-based platform accessible via a web browser. The website will be-->
-<!--        developed using HTML, CSS, and JavaScript, and will be hosted on a web server. The website will be accessible on-->
-<!--        desktop and mobile devices with an internet connection.</p>-->
-
-<!--    <h3>2.3 Design and Implementation Constraints</h3>-->
-<!--    <p>The Digital Herbarium Website will be designed and implemented with the following constraints:</p>-->
-<!--    <ul>-->
-<!--        <li>The website will be developed using HTML, CSS, and JavaScript</li>-->
-<!--        <li>The website will be hosted on a web server</li>-->
-<!--        <li>The website will be accessible on desktop and mobile devices with an internet connection</li>-->
-<!--    </ul>-->
-
