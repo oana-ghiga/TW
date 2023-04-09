@@ -374,7 +374,7 @@ header {
   z-index: 9999;
   position: fixed;
   top: 10vh;
-  max-width: calc(100vh - 180px);
+  width: 80vh;
   padding: 20px 50px;
   display: flex;
   justify-content: space-between;
