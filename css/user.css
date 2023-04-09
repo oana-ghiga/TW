@@ -206,3 +206,51 @@ backdrop-filter: blur(15px);
 -webkit-backdrop-filter: blur(8px);
 border: 1px solid rgba(255, 255, 255, 0.64);
 */
+@media only screen and (max-width: 620px) {
+  header {
+    position: fixed;
+    top: 5vh;
+    width: calc(100% - 4rem);
+  }
+
+  header ul.menu {
+    display: flex;
+    list-style: none;
+    alignment: center;
+  }
+
+  header ul.menu li {
+    width: 100%;
+    text-align: center;
+    margin: 0px 10px;
+  }
+
+  header ul.menu li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #2d5328;
+    text-shadow: 1px 1px 3px #5d8656;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: background 0.1s ease-in-out;
+    /*width: 100%;*/
+  }
+
+  .container {
+    height: auto;
+    min-height: 70vh;
+    position: fixed;
+    width: calc(100% - 4rem);
+  }
+
+}
+
+/* ADD THE FOLLOWING RULESET TO CHANGE THE MAIN FRAME WIDTH TO 85% */
+
+.middle-general-container {
+  width: calc(100% - 4rem);
+}

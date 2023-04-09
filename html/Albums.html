@@ -6,39 +6,40 @@
   <link rel="stylesheet" href="../css/albums.css">
 </head>
 <body>
-<header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Login</a></li>
-    </ul>
-  </nav>
-</header>
+<section class="bg-image">
+  <img alt="background" class="bg-image" src="../img/background.jpg">
+</section>
 
-<main class="albums">
+<section>
+  <header>
+    <ul class="menu">
+      <li><a href="MainPage.html"> Home </a></li>
+      <li><a href="Albums.html"> Albums </a></li>
+      <li><a href="User.html"> Profile </a></li>
+    </ul>
+  </header>
+
   <div class="container">
-    <h1>My Albums</h1>
-    <div class="albums-list">
-      <div class="album">
+    <div class="my-albums">
+      <h1>My Albums</h1>
+    </div>
+      <div class="album med">
         <h2>Medicinal Plants</h2>
         <ul>
           <li><img src="https://via.placeholder.com/150" alt="Medicinal 1"></li>
           <li><img src="https://via.placeholder.com/150" alt="Medicinal 2"></li>
           <li><img src="https://via.placeholder.com/150" alt="Medicinal 3"></li>
         </ul>
-        <button>Edit Album</button>
+        <div class = "btn_edit"> <button>Edit Album</button> </div>
       </div>
-      <div class="album">
+      <div class="album dec">
         <h2>Decorative Plants</h2>
         <ul>
           <li><img src="https://via.placeholder.com/150" alt="Decorative 1"></li>
           <li><img src="https://via.placeholder.com/150" alt="Decorative 2"></li>
         </ul>
-        <button>Edit Album</button>
+       <div class = "btn_edit"> <button>Edit Album</button> </div>
       </div>
-    </div>
     <div class="new-album">
       <h2>Create New Album</h2>
       <form action="#">
@@ -48,10 +49,7 @@
       </form>
     </div>
   </div>
-</main>
+</section>
 
-<footer>
-  <p>&copy; 2023 - My Website</p>
-</footer>
 </body>
 </html>
