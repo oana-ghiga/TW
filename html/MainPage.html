@@ -1,181 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Flower Name - Herbarium</title>
-  <title>Another</title>
-  <style>
-    body {
-      background-image: url("/img/plants/background_edit.png");
-      background-size: cover;
-    }
-
-    .search-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 10px;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .search-bar.hide {
-      opacity: 0;
-    }
-
-    .menu {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 150px;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 10px;
-    }
-
-    .plant-container {
-      margin: 100px auto;
-      max-width: 800px;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .plant-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .likes {
-      text-align: center;
-      font-size: 24px;
-      margin: 20px 0;
-    }
-
-    .tags {
-      float: right;
-      margin: 20px 0;
-      font-size: 18px;
-      color: #999;
-    }
-
-    .comments {
-      margin: 20px 0;
-    }
-
-    .comment-form {
-      margin-top: 20px;
-    }
-
-    .comment-form label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 18px;
-      color: #333;
-    }
-
-    .comment-form input[type="text"], .comment-form textarea {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      font-size: 18px;
-      border: 1px solid #999;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-
-    .comment-form input[type="submit"] {
-      background-color: #7d671f;
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .comment {
-      margin-bottom: 20px;
-    }
-
-    .comment p {
-      margin: 5px 0;
-      font-size: 18px;
-      color: #333;
-    }
-
-    .comment small {
-      font-size: 14px;
-      color: #999;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Herbal Web Manager</title>
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/js/main.js" rel="stylesheet">
 </head>
 <body>
-<div class="menu">
-  <div class="menu-icon"></div>
-  <ul>
-    <li><a href="#">User</a></li>
-    <li><a href="#">My Albums</a></li>
-    <li><a href="#">Popular Plants</a></li>
-    <li><a href="#">All Collections</a></li>
-  </ul>
-</div>
-<div class="search-bar">
-  <input type="text" placeholder="Search">
-</div>
-<div class="menu">
-  <ul>
-    <li><a href="#">User</a></li>
-    <div class="plant-details">
-      <div class="plant-image">
-        <img src="/img/plants/Cathium.png" alt="Plant">
-      </div>
-      <div class="plant-info">
-        <div class="plant-likes">
-          <span class="like-count">500 likes</span>
-          <button class="like-button">Like</button>
-        </div>
-        <div class="plant-tags">
-          <ul>
-            <li>Tag 1</li>
-            <li>Tag 2</li>
-            <li>Tag 3</li>
-          </ul>
-        </div>
+
+<section>
+
+  <img alt="background" class="bg-image" src="/img/background_edit.png">
+
+  <div class="middle-general-container">
+    <div class="image-container">
+      <img src="/img/Blessed_Athanium.png" alt="Image 1">
+      <div class="popup">
+        <h2>Image 1</h2>
+        <p>Description of image 1.</p>
       </div>
     </div>
-    <div class="comments">
-      <div class="comment">
-        <p>Comment 1</p>
-        <small>Posted by User 1</small>
-      </div>
-      <div class="comment">
-        <p>Comment 2</p>
-        <small>Posted by User 2</small>
+    <div class="image-container">
+      <img src="img/Cathium.png" alt="Image 2">
+      <div class="popup">
+        <h2>Image 2</h2>
+        <p>Description of image 2.</p>
       </div>
     </div>
-  </ul>
-  <section class="plant-comments">
-    <h2>Comments</h2>
-    <form>
-      <label for="comment">Add a comment:</label>
-      <textarea id="comment" name="comment"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <ul class="comment-list">
-      <li class="comment">
-        <span class="comment-author">John Doe:</span>
-        <span class="comment-text">This is a great plant!</span>
-      </li>
-      <li class="comment">
-        <span class="comment-author">Jane Smith:</span>
-        <span class="comment-text">I love the colors!</span>
-      </li>
+    <div class="image-container">
+      <img src="img/Dwarf_Sugarcane.png" alt="Image 3">
+      <div class="popup">
+        <h2>Image 3</h2>
+        <p>Description of image 3.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <header>
+    <a class="logo" href="/img/logo_rotund.png"> </a>
+    <ul class="menu">
+      <li><a href="MainPage.html"> Home </a></li>
+      <li><a href="Albums.html"> Albums </a></li>
+      <li><a href="User.html"> Profile </a></li>
     </ul>
-  </section>
-</div>
+  </header>
+</section>
 </body>
 </html>
