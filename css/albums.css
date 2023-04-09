@@ -36,11 +36,12 @@ section {
 }
 
 .container {
-  grid-gap: 50px;
-  grid-template-columns: 120px auto 120px;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
-      "profile-name profile-name profile-name"
-			"profile-pic profile-des profile-des";
+      "my-albums my-albums"
+			"album_dec album_med"
+      "new-album new-album";
 
   position: relative;
   width: 60%;
@@ -113,11 +114,11 @@ header ul.menu li a:hover {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.profile-name {
-  grid-area: profile-name;
+.my-albums {
+  grid-area: my-albums;
   text-decoration: none;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 25px;
   color: #ffffff;
   text-shadow: 1px 2px 5px #022300;
   padding: 7px 13px;
@@ -129,12 +130,78 @@ header ul.menu li a:hover {
   width: 100%;
 }
 
-.profile-pic {
-  grid-area: profile-pic;
+.album {
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 1px 2px 5px #022300;
+  padding: 20px 30px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
-.profile-des {
-  grid-area: profile-des;
+.btn_edit {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30%);
+}
+.btn_edit button {
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 20px;
+  color: #ffffff;
+  background: rgba(74, 132, 52, 0.61);
+  border: solid rgba(255, 255, 255, 0.71) 1px;
+  text-decoration: none;
+  transition: background 0.1s ease-in-out;
+}
+
+.new-album button {
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 13px;
+  color: #ffffff;
+  background: rgba(74, 132, 52, 0.61);
+  border: solid rgba(255, 255, 255, 0.71) 1px;
+  text-decoration: none;
+  transition: background 0.1s ease-in-out;
+}
+
+.btn_edit button:hover{
+  background: rgba(255, 255, 255,0.3);
+}
+
+.album ul {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.album ul li {
+  padding: 0.2rem;
+  list-style: none;
+  flex-basis: 50%;
+}
+
+.album--med {
+  grid-area: album_med;
+}
+
+.album--dec {
+  grid-area: album_med;
+}
+
+.new-album {
+  grid-area: new-album;
   text-decoration: none;
   font-weight: 300;
   font-size: 20px;
@@ -150,10 +217,7 @@ header ul.menu li a:hover {
 }
 
 
-.profile-des button {
-  margin: 1rem;
-  padding: 0.7rem 2rem;
-}
+
 
 /*
 position: relative;
@@ -171,51 +235,3 @@ backdrop-filter: blur(15px);
 -webkit-backdrop-filter: blur(8px);
 border: 1px solid rgba(255, 255, 255, 0.64);
 */
-@media only screen and (max-width: 620px) {
-  header {
-    position: fixed;
-    top: 5vh;
-    width: calc(100% - 4rem);
-  }
-
-  header ul.menu {
-    display: flex;
-    list-style: none;
-    alignment: center;
-  }
-
-  header ul.menu li {
-    width: 100%;
-    text-align: center;
-    margin: 0px 10px;
-  }
-
-  header ul.menu li a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #2d5328;
-    text-shadow: 1px 1px 3px #5d8656;
-    padding: 7px 13px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-bottom-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    transition: background 0.1s ease-in-out;
-    /*width: 100%;*/
-  }
-
-  .container {
-    height: auto;
-    min-height: 70vh;
-    position: fixed;
-    width: calc(100% - 4rem);
-  }
-
-}
-
-/* ADD THE FOLLOWING RULESET TO CHANGE THE MAIN FRAME WIDTH TO 85% */
-
-.middle-general-container {
-  width: calc(100% - 4rem);
-}
