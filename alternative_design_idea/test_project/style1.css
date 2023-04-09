@@ -1,0 +1,370 @@
+/* Index Page */
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Futura PT', sans-serif;}
+
+body {
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.middle-general-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #666;
+}
+
+/* Hero section styles */
+.hero {
+    text-shadow: 3px 3px  6px black;
+    background-image: linear-gradient(to bottom, rgba(44,113,29, 0.6), rgba(0, 0, 0, 0.4)), url("background_edit.png");
+    background-size: cover;
+    background-position: center;
+    height: 50em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.hero form button[type="submit"] {
+    background-color: #bd081c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+}
+
+.hero form button[type="submit"]:hover {
+    background-color: #8e060c;
+}
+
+/* Pins section styles */
+.pins {
+    margin-top: 80px;
+}
+
+.pins h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.pins ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pins li {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.pins li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.pins li a {
+    display: block;
+    position: relative;
+}
+
+.pins li a:hover {
+    opacity: 0.8;
+}
+
+.pins li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pins li h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Adds an ellipsis to indicate that text has been truncated */
+}
+
+.pins li p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Profile */
+
+.profile {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.profile h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.profile form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.profile label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile input[type="text"],
+.profile input[type="email"],
+.profile textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.profile input[type="submit"] {
+    background-color: #2c711d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.profile .album-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.profile .album {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.profile .album img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.profile .album h3 {
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+header {
+    background-color: #2c711d;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.middle-general-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.profile-pic {
+    float: left;
+    margin-right: 40px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    overflow: hidden;
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.profile-info button {
+    background-color: #2c711d;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.profile-info button:hover {
+    background-color: #2c711d;
+}
+
+.profile-info button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+footer {
+    background-color: #F2F2F2;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 0;
+}

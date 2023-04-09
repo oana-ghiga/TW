@@ -1,0 +1,322 @@
+body {
+    font-family: 'Glegoo';
+    margin: 0;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    padding: 100px;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    background-size: cover;
+    background-position: center;
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("background_edit.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+    width: 1400px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.header p1 {
+    font-size: 40px;
+}
+
+.header p2 {
+    font-size: 20px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #7d671f;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a:hover {
+    background-color: #e8bc2a;
+    color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 30%;
+    text-align: center;
+    padding: 50px;
+    background-color: #403d33;
+    color: white;
+}
+
+.side a {
+    color: #ffcf33;
+}
+
+.main {
+    flex: 70%;
+    background-color: #3b382f;
+    padding: 20px;
+    color: white;
+}
+
+.main h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side1 {
+    flex: 30%;
+    text-align: center;
+    padding: 50px;
+    background-color: #403d33;
+    color: white;
+}
+
+.side2 {
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    flex: 30%;
+    text-align: center;
+    padding: 50px;
+    background-color: #403d33;
+    color: white;
+    height: 700px;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.side1 a {
+    color: #ffcf33;
+}
+
+.main1 {
+    flex: 70%;
+    background-color: #3b382f;
+    padding: 20px;
+    color: white;
+}
+
+.main1 h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    background-color: #7d671f;
+    text-shadow: 5px 5px 3px #4f4114;
+}
+
+div.desc1 {
+    padding: 15px;
+    text-align: center;
+    background-color: #7d671f;
+    text-shadow: 5px 5px 3px #4f4114;
+}
+
+body {
+    font-family: 'Glegoo';
+    margin: 0;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    padding: 100px;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    background-size: cover;
+    background-position: center;
+}
+
+.header p1 {
+    font-size: 40px;
+}
+
+.header p2 {
+    font-size: 20px;
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("background_edit.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+    width: 1400px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #7d671f;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a:hover {
+    background-color: #e8bc2a;
+    color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 30%;
+    text-align: center;
+    padding: 50px;
+    background-color: #403d33;
+    color: white;
+}
+
+.side a {
+    color: #ffcf33;
+}
+
+.main {
+    flex: 70%;
+    background-color: #3b382f;
+    padding: 20px;
+    color: white;
+}
+
+.main h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side1 {
+    flex: 30%;
+    text-align: center;
+    padding: 50px;
+    background-color: #403d33;
+    color: white;
+}
+
+.side2 {
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    flex: 30%;
+    text-align: center;
+    padding: 50px;
+    background-color: #403d33;
+    color: white;
+    height: 700px;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.side1 a {
+    color: #ffcf33;
+}
+
+.main1 {
+    flex: 70%;
+    background-color: #3b382f;
+    padding: 20px;
+    color: white;
+}
+
+.main1 h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+/* Merge the two styles into one */
+div.desc, div.desc1 {
+    padding: 15px;
+    text-align: center;
+    background-color: #7d671f;
+    text-shadow: 5px 5px 3px #4f4114;
+}

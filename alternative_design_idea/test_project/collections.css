@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+header {
+    background-color: #EA4C89;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.middle-general-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.albums h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.albums-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.album {
+    width: 45%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #F2F2F2;
+}
+
+.album h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.album ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.album ul li {
+    width: calc(33.33% - 10px);
+    margin-bottom: 10px;
+}
+
+.album ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    background-color: #EA4C89;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #F2A2C2;
+}
+
+.new-album {
+    background-color: #FFF;
+    padding: 20px;
+    margin-top: 40px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+}
+
+.new-album h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form button[type="submit"] {
+    background-color: #EA4C89;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #F2A2C2;
+}
