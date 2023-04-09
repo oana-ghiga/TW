@@ -31,20 +31,20 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 50px;
+  /*min-height: 100vh;*/
+  padding: 10vh 20vw;
 }
 
 .container {
-  grid-gap: 50px;
+  grid-gap: 1vw;
   grid-template-columns: 120px auto 120px;
   grid-template-areas:
       "profile-name profile-name profile-name"
 			"profile-pic profile-des profile-des";
 
   position: relative;
-  width: 60%;
   min-height: 70vh;
+  max-width: 80vw;
   display: grid;
   align-content: center;
   padding: 50px;
@@ -66,15 +66,16 @@ img {
 header {
   z-index: 9999;
   position: fixed;
-  top: 10vh;
-  max-width: calc(100vh - 180px);
+  top: 5vh;
   padding: 20px 50px;
+  max-height: 10vh;
+  max-width: 80vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  border-radius: 2rem;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom-color: rgba(255, 255, 255, 0.2);
@@ -153,6 +154,40 @@ header ul.menu li a:hover {
 .profile-des button {
   margin: 1rem;
   padding: 0.7rem 2rem;
+}
+
+@media screen and (max-width: 620px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 10vw;
+  }
+  header {
+    position: fixed;
+    top: 5vh;
+    max-width: 80vw;
+    text-align: center;
+    padding: 10px;
+    min-height: 8vh;
+  }
+
+  .container {
+    flex-direction: column;
+    position: relative;
+    min-height: 70vh;
+    max-width: 80vw;
+    display: flex;
+    align-content: center;
+    padding: 3vw;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.64);
+
+  }
 }
 
 /*
