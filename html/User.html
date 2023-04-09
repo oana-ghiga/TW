@@ -3,38 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>User Profile</title>
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="/css/user.css">
 </head>
 <body>
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
+<section class="bg-image">
+  <img alt="background" class="bg-image" src="../img/background.jpg">
+</section>
+
+<section>
+  <header>
+    <ul class="menu">
+      <li><a href="../html/MainPage.html">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#">Login</a></li>
     </ul>
-  </nav>
-</header>
+  </header>
 
-<main class="profile">
   <div class="container">
-    <div class="profile-pic">
-      <img src="https://via.placeholder.com/150" alt="Profile Picture">
-    </div>
-    <div class="profile-info">
-      <h1>Jane Doe</h1>
-      <p><strong>Username:</strong> janedoe</p>
-      <p><strong>Email:</strong> janedoe@example.com</p>
-      <p><strong>Location:</strong> New York, NY</p>
-      <p><strong>Bio:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id eros magna. Nam bibendum elit nunc, sit amet dictum elit feugiat nec. Donec eget justo non felis bibendum placerat. Curabitur sodales leo in nisl bibendum, sed posuere odio interdum. Nulla facilisi.</p>
-      <button>Edit Profile</button>
-    </div>
-  </div>
-</main>
+      <div class="profile-name">
+        <h1>Jane Doe</h1>
+      </div>
 
-<footer>
-  <p>&copy; 2023 - My Website</p>
-</footer>
+      <div class="profile-pic">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      </div>
+
+      <div class="profile-des">
+        <p><strong>Username:</strong> janedoe</p>
+        <p><strong>Email:</strong> janedoe@example.com</p>
+        <p><strong>Location:</strong> New York, NY</p>
+        <p><strong>Bio:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id eros magna. Nam
+          bibendum elit nunc, sit amet dictum elit feugiat nec. Donec eget justo non felis bibendum placerat. Curabitur
+          sodales leo in nisl bibendum, sed posuere odio interdum. Nulla facilisi.</p>
+        <div class="edit-profile-btn">
+          <button>Edit Profile</button>
+        </div>
+
+      </div>
+
+  </div>
+</section>
+
 </body>
 </html>

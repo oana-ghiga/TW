@@ -286,10 +286,7 @@ body {
   position: absolute;
   bottom: -10rem;
   right: -20rem;
-  transform:
-    scaleX(-1)
-    rotateZ(-10deg)
-    scale(120%);
+  transform: scaleX(-1) rotateZ(-10deg) scale(120%);
   height: 60vh;
   z-index: 1;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
@@ -306,6 +303,7 @@ body {
   background-attachment: fixed;
   transform: translate(-2%, 0);
 }
+
 .image-container {
   position: relative;
   text-align: center;
@@ -334,6 +332,7 @@ body {
 .popup-show {
   display: block;
 }
+
 .popup h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -354,7 +353,6 @@ section {
 .middle-general-container {
   position: relative;
   width: 40%;
-  min-height: calc(100vh - 180px);
   min-height: 70vh;
   display: flex;
   justify-content: center;
@@ -369,17 +367,19 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.64);
 
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 header {
   z-index: 9999;
   position: fixed;
   top: 10vh;
+  padding: 20px 50px;
   width: 80vw;
   max-height: 10vw;
-  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -412,7 +412,7 @@ header ul.menu li a {
   text-shadow: 1px 1px 3px #5d8656;
   padding: 7px 10px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
@@ -421,7 +421,7 @@ header ul.menu li a {
 }
 
 header ul.menu li a:hover {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .parent {
@@ -464,6 +464,7 @@ header ul.menu li a:hover {
     margin-right: 10px;
     margin-left: 10px;
   }
+
   header {
     position: fixed;
     top: 5vh;
@@ -477,7 +478,6 @@ header ul.menu li a:hover {
   /*justify-content: center;*/
   /*text-align: center;*/
   /*padding: 10px;*/
-
   header ul.menu {
     display: flex;
     list-style: none;
@@ -498,7 +498,7 @@ header ul.menu li a:hover {
     text-shadow: 1px 1px 3px #5d8656;
     padding: 0.2rem 0.7rem;
     border-radius: 20px;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-bottom-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
@@ -531,8 +531,6 @@ header ul.menu li a:hover {
 .middle-general-container {
   width: calc(100% - 4rem);
 }
-
-
 
 
 /*..................................................................................VECHI...................................................*/
