@@ -296,13 +296,15 @@ body {
 }
 
 .bg-image {
+  background-size: cover;
+  z-index: -1;
   position: absolute;
-  background-image: url("/img/bkg.png");
   filter: blur(5px) brightness(70%) saturate(70%);
   /*background-color: #243321;*/
-  background-size: cover;
   height: 110%;
+  width: 110%;
   background-attachment: fixed;
+  transform: translate(-2%, 0);
 }
 .image-container {
   position: relative;
@@ -365,13 +367,14 @@ section {
 
 }
 img {
-  max-width: 40%;
+  max-width: 100%;
   height: auto;
 }
 header {
-  position: absolute;
+  z-index: 9999;
+  position: fixed;
   top: 10vh;
-  width: calc(80% - 30rem);
+  max-width: calc(100vh - 180px);
   padding: 20px 50px;
   display: flex;
   justify-content: space-between;
@@ -410,6 +413,7 @@ header ul.menu li a {
   border-bottom-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   transition: background 0.1s ease-in-out;
+  width: 100%;
 }
 
 header ul.menu li a:hover {
@@ -449,16 +453,45 @@ header ul.menu li a:hover {
   grid-area: 3 / 1 / 4 / 7;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 620px) {
   header {
+    position: fixed;
     top: 5vh;
     width: calc(100% - 4rem);
   }
 
+  header ul.menu {
+    display: flex;
+    list-style: none;
+    alignment: center;
+  }
+
+  header ul.menu li {
+    width: 100%;
+    text-align: center;
+    margin: 0px 10px;
+  }
+
+  header ul.menu li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #2d5328;
+    text-shadow: 1px 1px 3px #5d8656;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: background 0.1s ease-in-out;
+    /*width: 100%;*/
+  }
+
   .middle-general-container {
-    width: calc(100% - 4rem);
     height: auto;
-    min-height: 60vh;
+    min-height: 70vh;
+    position: fixed;
+    width: calc(100% - 4rem);
   }
 
   .parent {
@@ -475,7 +508,7 @@ header ul.menu li a:hover {
 /* ADD THE FOLLOWING RULESET TO CHANGE THE MAIN FRAME WIDTH TO 85% */
 
 .middle-general-container {
-  width: 85%;
+  width: calc(100% - 4rem);
 }
 
 
