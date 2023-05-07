@@ -8,5 +8,5 @@ dropdown.style.display = 'none';
 // add a click event listener to the dropdownButton
 dropdownButton.addEventListener('click', () => {
   // toggle the display property of the dropdown element
-  dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
 });
