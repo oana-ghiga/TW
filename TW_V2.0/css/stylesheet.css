@@ -1,0 +1,159 @@
+/* ---            class              --- */
+.HC {
+    align-items: center;
+}
+
+.shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.headerContents {
+    display: flex;
+    margin: 15px 25px;
+    justify-content: space-between;
+}
+
+.headerContents p{
+    color: #828282;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+.leftSide {
+    display: flex;
+}
+
+.logoContainer {
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+}
+
+.logoContainer img {
+    height: 100%;
+    width: 100%;
+}
+
+.rightSide {
+    display: flex;
+}
+
+.searchButtonContainer {
+    height: 40px;
+    display: flex;
+}
+
+.searchButtonContainer img {
+    height: 80%;
+    width: auto;
+}
+
+.searchButtonContainer,
+.aboutButtonContainer,
+.albumsButtonContainer,
+.profileButtonContainer {
+    display: flex;
+    text-align: center;
+    height: 40px;
+    margin: 0 5px;
+}
+
+.logoutButtonContainer {
+    background-color: #F0EFF2;
+    display: flex;
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    margin: 0 5px;
+    margin-right: 0;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dropdownButton {
+    display: none;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+}
+
+.dropdownButton img {
+    height: 60%;
+    width: auto;
+}
+
+.dropdownContainer {
+    position: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownMenu {
+    align-items: center;
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: auto;
+    right: 15px;
+    z-index: 1;
+    width: 125px;
+    height: 198px;
+    border-radius: 30px;
+    background-color: #EFEFEF;;
+    border-radius: 15px;
+  }
+
+.dropdownMenu > div {
+    flex-direction: column;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.dropdownMenu > div > * {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    margin-left: 20px;
+    color: #565656;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+/* ---            id              --- */
+
+@media screen and (max-width: 768px) {
+    .headerContents {
+        display: flex;
+        margin: 15px 5px;
+        justify-content: space-between;
+    }
+
+    .aboutButtonContainer,
+    .albumsButtonContainer,
+    .profileButtonContainer,
+    .logoutButtonContainer {
+        display: none;
+    }
+
+    .dropdownContainer {
+        order: 1;
+    }
+
+    .dropdownButton {
+        display: flex;
+    }
+}
+
+
+
+
+
