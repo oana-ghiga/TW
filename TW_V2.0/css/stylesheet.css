@@ -358,3 +358,30 @@ body {
 :root {
     font-family: 'Sarala', sans-serif;
 }
+
+.content {
+    overflow-y: scroll;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    width: calc(33.33% - 20px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .lazy-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

@@ -65,6 +65,7 @@ listItems.forEach(item => {
   });
 });
 
+// authenthication check section 
 const albumsButton = document.querySelector('.albumsButtonContainer');
 const profileButton = document.querySelector('.profileButtonContainer');
 const logoutButton = document.querySelector('.logoutButtonContainer');
@@ -99,3 +100,41 @@ function isAuthenticated() {
 }
 
 checkAuth();
+
+// dynamic image loading section
+const imageGrid = document.querySelector('.image-grid');
+const imageTemplate = document.querySelector('#image-template');
+
+const intersectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const lazyImage = entry.target;
+      lazyImage.src = lazyImage.dataset.src;
+      lazyImage.onload = () => lazyImage.classList.remove('lazy-image');
+      intersectionObserver.unobserve(lazyImage);
+    }
+  });
+});
+
+const images = [...Array(1000).keys()].map(i => `https://placekitten.com/200/200?image=${i + 1}`);
+images.forEach(image => {
+  const newImage = imageTemplate.content.cloneNode(true);
+  const lazyImage = newImage.querySelector('.lazy-image');
+  lazyImage.dataset.src = image;
+  imageGrid.appendChild(newImage);
+  intersectionObserver.observe(lazyImage);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
