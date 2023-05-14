@@ -40,6 +40,26 @@ document.addEventListener('click', (event) => {
   }
 });
 
-function isAuthenticated() {
-  return false;
+const albumsButton = document.querySelector('.albumsButtonContainer');
+const profileButton = document.querySelector('.profileButtonContainer');
+const logoutButton = document.querySelector('.logoutButtonContainer');
+const loginButton = document.querySelector('.loginButtonContainer');
+const signupButton = document.querySelector('.signupButtonContainer');
+
+function checkAuth() {
+  if (isAuthenticated()) {
+    loginButton.style.display = 'none';
+    signupButton.style.display = 'none';
+  } else {
+    albumsButton.style.display = 'none';
+    profileButton.style.display = 'none';
+    logoutButton.style.display = 'none';
+  }
 }
+
+// mock function to check if the user is authenticated
+function isAuthenticated() {
+  return true;
+}
+
+checkAuth();

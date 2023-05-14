@@ -109,7 +109,6 @@
     animation-duration: 0.5s;
     animation-delay: 0s;
     animation-fill-mode: forwards;
-    opacity: 0;
 }
 
 #searchBar {
@@ -252,7 +251,9 @@ body {
     .aboutButtonContainer,
     .albumsButtonContainer,
     .profileButtonContainer,
-    .logoutButtonContainer {
+    .logoutButtonContainer,
+    .loginButtonContainer,
+    .signupButtonContainer {
         display: none;
     }
 
@@ -263,6 +264,28 @@ body {
 
     .dropdownButton {
         display: flex;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .searchBarContainer.HC {
+        width: 100%;
+        top: 60px;
+        left: 0;
+        padding: 0.5rem;
+        position: absolute;
+    }
+
+    .searchBar {
+        animation-name: dropdown;
+        animation-duration: 0.3s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        width: 100%;
+    }
+
+    #searchBar {
+        width: calc(100% - 40px);
     }
 }
 
