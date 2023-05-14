@@ -105,24 +105,36 @@ checkAuth();
 const imageGrid = document.querySelector('.image-grid');
 const imageTemplate = document.querySelector('#image-template');
 
-const intersectionObserver = new IntersectionObserver(entries => {
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const observerCallback = entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const lazyImage = entry.target;
       lazyImage.src = lazyImage.dataset.src;
       lazyImage.onload = () => lazyImage.classList.remove('lazy-image');
-      intersectionObserver.unobserve(lazyImage);
+      observer.unobserve(lazyImage);
+    } else {
+      const lazyImage = entry.target;
+      lazyImage.src = '';
+      lazyImage.classList.add('lazy-image');
     }
   });
-});
+};
 
-const images = [...Array(1000).keys()].map(i => `https://placekitten.com/200/200?image=${i + 1}`);
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+const images = [...Array(100).keys()].map(i => `https://placekitten.com/200/200?image=${i + 1}`);
 images.forEach(image => {
   const newImage = imageTemplate.content.cloneNode(true);
   const lazyImage = newImage.querySelector('.lazy-image');
   lazyImage.dataset.src = image;
   imageGrid.appendChild(newImage);
-  intersectionObserver.observe(lazyImage);
+  observer.observe(lazyImage);
 });
 
 
