@@ -46,14 +46,25 @@ const logoutButton = document.querySelector('.logoutButtonContainer');
 const loginButton = document.querySelector('.loginButtonContainer');
 const signupButton = document.querySelector('.signupButtonContainer');
 
+const menuProfile = document.querySelector('.profile');
+const menuAlbums = document.querySelector('.albums');
+const menuLogout = document.querySelector('.logout');
+const menuLogin = document.querySelector('.login');
+const menuSignup = document.querySelector('.signup');
+
 function checkAuth() {
   if (isAuthenticated()) {
     loginButton.style.display = 'none';
     signupButton.style.display = 'none';
+    menuLogin.style.display = 'none';
+    menuSignup.style.display = 'none';
   } else {
     albumsButton.style.display = 'none';
     profileButton.style.display = 'none';
     logoutButton.style.display = 'none';
+    menuAlbums.style.display = 'none';
+    menuProfile.style.display = 'none';
+    menuLogout.style.display = 'none';
   }
 }
 
