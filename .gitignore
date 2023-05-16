@@ -105,3 +105,4 @@ dist
 
 #JetBrains files
 .DS_Store
+.idea
