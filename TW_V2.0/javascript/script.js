@@ -102,8 +102,9 @@ function isAuthenticated() {
 checkAuth();
 
 // dynamic image loading section
-const imageGrid = document.querySelector('.image-grid');
-const imageTemplate = document.querySelector('#image-template');
+const imageGrid = document.querySelector('.image_grid');
+const imageTemplate = document.querySelector('#image_template');
+const card_types = ['small_card' , 'medium_card' , 'large_card'];
 
 const observerOptions = {
   root: null,
@@ -116,7 +117,7 @@ const observerCallback = entries => {
     if (entry.isIntersecting) {
       const lazyImage = entry.target;
       lazyImage.src = lazyImage.dataset.src;
-      lazyImage.onload = () => lazyImage.classList.remove('lazy-image');
+      // lazyImage.onload = () => lazyImage.classList.remove('lazy-image');
       observer.unobserve(lazyImage);
     } else {
       const lazyImage = entry.target;
@@ -126,13 +127,38 @@ const observerCallback = entries => {
   });
 };
 
+// getting the root element
+var r = document.querySelector(':root');
+var rs = getComputedStyle(r);
+
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 const images = [...Array(100).keys()].map(i => `https://placekitten.com/200/200?image=${i + 1}`);
+var idx = 0;
 images.forEach(image => {
   const newImage = imageTemplate.content.cloneNode(true);
+  var imageCard = newImage.querySelector('.image_card');
   const lazyImage = newImage.querySelector('.lazy-image');
+  
+  imageCard.classList.add(card_types[idx % 3]);
+  switch(card_types[idx % 3]) {
+    case 'small_card':
+      var card_height = rs.getPropertyValue('--card_small') * 10 - 30;
+      lazyImage.style.height = card_height + 'px';
+      break;
+    case 'medium_card':
+      var card_height = rs.getPropertyValue('--card_medium') * 10 - 30;
+      lazyImage.style.height = card_height + 'px';
+      break;
+    case 'large_card':
+      var card_height = rs.getPropertyValue('--card_large') * 10 - 30;
+      lazyImage.style.height = card_height + 'px';
+      break;
+  }
+  idx++;
+
   lazyImage.dataset.src = image;
+
   imageGrid.appendChild(newImage);
   observer.observe(lazyImage);
 });

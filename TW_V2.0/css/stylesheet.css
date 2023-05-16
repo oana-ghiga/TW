@@ -2,6 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
 
+:root {
+    font-family: 'Sarala', sans-serif;
+    --card_width: 250px;
+    --card_width_mobile: calc(95vw/2);
+    --card_border_radius: 15px;
+    --row_increment: 10px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;    
+}
+
 /* ----------- animations ------------ */
 
 @keyframes button-click {
@@ -45,10 +56,18 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+.headerContainer {
+    width: 100%;
+    color: white;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+
 .headerContents {
-  /* justify-content: space-between; */
+  height: 80px;
   display: flex;
-  margin: 15px 10px;
+  padding: 0 10px;
 }
 
 .headerContents p{
@@ -95,10 +114,10 @@
 }
 
 .searchBarContainer {
-  box-sizing: border-box;
-  padding-left: 0.5rem;
-  display: flex;
-  z-index: 1;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    display: flex;
+    z-index: 1;
 }
 
 .searchBar {
@@ -238,20 +257,22 @@
 }
 
 .filterMenuContainer {
-  max-height: 40vh;
-  width: 30vw;
-  padding-bottom: 1rem;
-  z-index: 1;
-  background-color: #EFEFEF;
-  overflow: scroll;
-  margin-left: auto;
-  margin-right: 10px;
-  border-radius: 15px;
-  animation: dropdown 0.3s ease-out forwards;
-  position: absolute;
-  top: 70px;
-  left: auto;
-  right: 10px;
+    max-height: 40vh;
+    width: 30vw;
+    padding-bottom: 1rem;
+    z-index: 1;
+    background-color: #EFEFEF;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 15px;
+    animation: dropdown 0.3s ease-out forwards;
+    position: absolute;
+    top: 70px;
+    left: auto;
+    right: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .filterMenu {
@@ -333,149 +354,90 @@ body {
   }
 }
 
-@media screen and (max-width: 380px) {
-  .searchBarContainer.HC {
-    width: 100%;
-    top: 70px;
-    left: 0;
-    padding: 0.5rem;
-    position: absolute;
-  }
-
-  .searchBar {
-    animation-name: dropdown;
-    animation-duration: 0.3s;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-    width: 100%;
-  }
-
-  #searchBar {
-    width: calc(100% - 40px);
-  }
-
-  .filterMenuContainer {
-    max-height: calc(100vh - 100px);
-    width: calc(100% - 20px);
-  }
-}
-
 /* AICI  */
 
-.content {
-  max-height: calc(100vh - 90px);
-  overflow-y: scroll;
-  padding: 0 10px;
+.photo_content {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 95vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  /* gap: 3px; */
-  max-width: 100%;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
+.image_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
 }
 
-.image-container {
-  width: 200px;
-  height: auto;
-  position: relative;
-  overflow: hidden;
+.image_card {
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+}
+
+.small_card {
+    grid-row-end: span var(--card_small);
+}
+
+.medium_card {
+    grid-row-end: span var(--card_medium);
+}
+
+.large_card {
+    grid-row-end: span var(--card_large);
 }
 
 .lazy-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    width: 230px;
+    height: auto;
+    background-color: #F0EFF2;
+    object-fit: cover;
+    border-radius: inherit;
 }
 
+@media screen and (max-width: 380px) {
+    .searchBarContainer.HC {
+      width: 100%;
+      top: 70px;
+      left: 0;
+      padding: 0.5rem;
+      position: absolute;
+    }
+  
+    .searchBar {
+      animation-name: dropdown;
+      animation-duration: 0.3s;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+      width: 100%;
+    }
+  
+    #searchBar {
+      width: calc(100% - 40px);
+    }
+  
+    .filterMenuContainer {
+      max-height: calc(100vh - 100px);
+      width: calc(100% - 20px);
+    }
 
+    .image_grid {
+        grid-template-columns: repeat(auto-fill, var(--card_width_mobile));
+    }
+  
+    .image_card {
+      padding: 0;
+      margin: 15px 5px;
+      border-radius: var(--card_border_radius);
+    }
 
-
-
-/*---------------modificarile laviniei in css-------------------*/
-.content {
-  overflow-x: hidden;
-}
-
-.albumList{
-
-}
-
-.album {
-  position: absolute;
-  place-items: center;
-  width: 98%;
-  display: grid;
-  justify-content: center;
-  column-gap: 35px;
-  row-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(var(--albumBox-item-size), var(--albumBox-item-size)));
-}
-
-.albumBox-container{
-  overflow: hidden;
-  border-radius: 30px;
-  background-color: #F8F8F8;
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
-  padding: 10px;
-}
-
-.albumBox-container h2{
-  padding: 0;
-  margin: 0;
-  color: hsl(0,0%,51%);
-  text-align: center;
-}
-.albumBox-grid {
-  display: grid;
-  place-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  height: var(--albumBox-item-size);
-  width: var(--albumBox-item-size);
-}
-
-.albumBox-grid-item:nth-of-type(4n) {
-  position: relative;
-}
-
-.albumBox-grid-item:nth-of-type(4n)::before {
-  content: attr(data-count);
-  color: white;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(128, 128, 128, 0.8);
-}
-
-.albumBox-grid-item {
-  height: calc(var(--albumBox-item-size) / 2.2);
-  width: calc(var(--albumBox-item-size) / 2.2);
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-
-.albumBox-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-:root {
-  font-family: 'Sarala', sans-serif;
-  --albumBox-item-size: 150px;
-}
+    .lazy-image {
+        width: calc(95vw/2 - 10px);
+    }
+  }
