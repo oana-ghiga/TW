@@ -96,7 +96,7 @@ function checkAuth() {
 
 // mock function to check if the user is authenticated
 function isAuthenticated() {
-  return true;
+  return false;
 }
 
 checkAuth();

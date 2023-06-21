@@ -3,14 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
 
 :root {
-    font-family: 'Sarala', sans-serif;
-    --card_width: 250px;
-    --card_width_mobile: calc(95vw/2);
-    --card_border_radius: 15px;
-    --row_increment: 10px;
-    --card_small: 26;
-    --card_medium: 33;
-    --card_large: 45;    
+  font-family: 'Sarala', sans-serif;
+  --card_width: 250px;
+  --card_width_mobile: calc(95vw/2);
+  --card_border_radius: 15px;
+  --row_increment: 10px;
+  --card_small: 26;
+  --card_medium: 33;
+  --card_large: 45;
+  --color-text-gray: #828282;
+  --color-green-200: #7b886b;
+  --color-whitesmoke-100: #f8f8f8;
+  --color-whitesmoke-200: #f0eff2;
+  --color-gainsboro-100: #dfd9d9;
+  --color-gainsboro-200: #d9d9d9;
+  --color-dimgray: #565656;
+  --color-black: #000;
+  --color-darkgray: #b4b4b4;
 }
 
 /* ----------- animations ------------ */
@@ -19,9 +28,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -43,6 +54,7 @@
   from {
     transform: translateY(-10px);
   }
+
   to {
     transform: translateY(0);
   }
@@ -57,11 +69,11 @@
 }
 
 .headerContainer {
-    width: 100%;
-    color: white;
-    background-color: white;
-    position: fixed;
-    z-index: 1;
+  width: 100%;
+  color: white;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
 }
 
 .headerContents {
@@ -70,7 +82,7 @@
   padding: 0 10px;
 }
 
-.headerContents p{
+.headerContents p {
   color: #828282;
   font-style: normal;
   font-weight: 700;
@@ -114,10 +126,10 @@
 }
 
 .searchBarContainer {
-    box-sizing: border-box;
-    padding-left: 0.5rem;
-    display: flex;
-    z-index: 1;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  display: flex;
+  z-index: 1;
 }
 
 .searchBar {
@@ -171,7 +183,8 @@
   cursor: pointer;
 }
 
-.logoutButtonContainer, .signupButtonContainer {
+.logoutButtonContainer,
+.signupButtonContainer {
   min-width: fit-content;
   background-color: #F0EFF2;
   display: flex;
@@ -185,7 +198,7 @@
 
 .loginButtonContainer {
   min-width: fit-content;
-  background-color: #7B886B;
+  background-color: var(--color-green-200);
   display: flex;
   height: 40px;
   padding: 0 1rem;
@@ -196,7 +209,7 @@
   cursor: pointer;
 }
 
-.loginButtonContainer > p {
+.loginButtonContainer>p {
   color: #F0EFF2;
 }
 
@@ -236,13 +249,13 @@
   padding: 1rem;
 }
 
-.dropdownMenu > div {
+.dropdownMenu>div {
   display: flex;
   flex-direction: column;
   align-content: center;
 }
 
-.dropdownMenu > div > * {
+.dropdownMenu>div>* {
   position: relative;
   display: flex;
   text-decoration: none;
@@ -252,26 +265,26 @@
   font-size: 1.5rem;
 }
 
-.dropdownMenu > div:last-child {
+.dropdownMenu>div:last-child {
   margin-bottom: 0;
 }
 
 .filterMenuContainer {
-    max-height: 40vh;
-    width: 30vw;
-    padding-bottom: 1rem;
-    z-index: 1;
-    background-color: #EFEFEF;
-    overflow: scroll;
-    margin-left: auto;
-    border-radius: 15px;
-    animation: dropdown 0.3s ease-out forwards;
-    position: absolute;
-    top: 70px;
-    left: auto;
-    right: 10px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+  max-height: 40vh;
+  width: 30vw;
+  padding-bottom: 1rem;
+  z-index: 1;
+  background-color: #EFEFEF;
+  overflow: scroll;
+  margin-left: auto;
+  border-radius: 15px;
+  animation: dropdown 0.3s ease-out forwards;
+  position: absolute;
+  top: 70px;
+  left: auto;
+  right: 10px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .filterMenu {
@@ -354,52 +367,114 @@ body {
   }
 }
 
+/*---------------loginPage-------------------*/
+
+.loginContainer {
+  position: absolute;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  margin: 65px auto;
+  padding: 0;
+  top: 80px;
+  width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 40px;
+  background-color: var(--color-whitesmoke-100);
+  text-align: center;
+}
+
+.loginContainer h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 35px 35px 0;
+  margin: 0;
+}
+
+.loginFormContents {
+  padding: 35px;
+  text-align: center;
+}
+
+#username, #password {
+  min-width: 300px;
+  padding-left: 10px;
+  height: 3rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+  font-weight: 300;
+  color: #828282;
+  background-color: #F0EFF2;
+}
+
+#login {
+  border-radius: 10px;
+  border: none;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #F0EFF2;
+  background-color: var(--color-green-200);
+  cursor: pointer;
+  height: 2.5rem;
+  width: 7rem;
+}
+
+.loginButton {
+  display: flex;
+  padding: 1 1rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  justify-content: center;
+}
+
 /* AICI  */
 
 .photo_content {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 80px;
-    width: 95vw;
-    left: 50%;
-    transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 80px;
+  width: 95vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .image_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, var(--card_width));
-    grid-auto-rows: var(--row_increment);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card_width));
+  grid-auto-rows: var(--row_increment);
+  justify-content: center;
 }
 
 .image_card {
-    padding: 0;
-    margin: 15px 10px;
-    border-radius: var(--card_border_radius);
+  padding: 0;
+  margin: 15px 10px;
+  border-radius: var(--card_border_radius);
 }
 
 .small_card {
-    grid-row-end: span var(--card_small);
+  grid-row-end: span var(--card_small);
 }
 
 .medium_card {
-    grid-row-end: span var(--card_medium);
+  grid-row-end: span var(--card_medium);
 }
 
 .large_card {
-    grid-row-end: span var(--card_large);
+  grid-row-end: span var(--card_large);
 }
 
 .lazy-image {
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    width: 230px;
-    height: auto;
-    background-color: #F0EFF2;
-    object-fit: cover;
-    border-radius: inherit;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 230px;
+  height: auto;
+  background-color: #F0EFF2;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 @media screen and (max-width: 420px) {
@@ -414,110 +489,109 @@ body {
   }
 
   .lazy-image {
-      width: calc(95vw/2 - 10px);
+    width: calc(95vw/2 - 10px);
   }
 }
 
 @media screen and (max-width: 380px) {
-    .searchBarContainer.HC {
-      width: 100%;
-      top: 70px;
-      left: 0;
-      padding: 0.5rem;
-      position: absolute;
-    }
-  
-    .searchBar {
-      animation-name: dropdown;
-      animation-duration: 0.3s;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
-      width: 100%;
-    }
-  
-    #searchBar {
-      width: calc(100% - 40px);
-    }
-  
-    .filterMenuContainer {
-      max-height: calc(100vh - 100px);
-      width: calc(100% - 20px);
-      position: absolute;
-      top: 80px;
-      right: 2.5vw;
-    }
+  .searchBarContainer.HC {
+    width: 100%;
+    top: 70px;
+    left: 0;
+    padding: 0.5rem;
+    position: absolute;
   }
 
-  /*---------------modificarile laviniei in css-------------------*/
+  .searchBar {
+    animation-name: dropdown;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    width: 100%;
+  }
+
+  #searchBar {
+    width: calc(100% - 40px);
+  }
+
+  .filterMenuContainer {
+    max-height: calc(100vh - 100px);
+    width: calc(100% - 20px);
+    position: absolute;
+    top: 80px;
+    right: 2.5vw;
+  }
+}
+
+/*---------------modificarile laviniei in css-------------------*/
 .content {
-    overflow-x: hidden;
-  }
-  
-  .albumList{
-  
-  }
-  
-  .album {
-    position: absolute;
-    place-items: center;
-    width: 98%;
-    display: grid;
-    justify-content: center;
-    column-gap: 35px;
-    row-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(var(--albumBox-item-size), var(--albumBox-item-size)));
-  }
+  overflow-x: hidden;
+}
 
-  .albumBox-container{
-    overflow: hidden;
-    border-radius: 30px;
-    background-color: #F8F8F8;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
-    padding: 10px;
-  }
+.albumList {}
 
-  .albumBox-container h2{
-    padding: 0;
-    margin: 0;
-    color: hsl(0,0%,51%);
-    text-align: center;
-  }
-  .albumBox-grid {
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    height: var(--albumBox-item-size);
-    width: var(--albumBox-item-size);
-  }
+.album {
+  position: absolute;
+  place-items: center;
+  width: 98%;
+  display: grid;
+  justify-content: center;
+  column-gap: 35px;
+  row-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--albumBox-item-size), var(--albumBox-item-size)));
+}
 
-  .albumBox-grid-item:nth-of-type(4n) {
-    position: relative;
-  }
+.albumBox-container {
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: #F8F8F8;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
 
-  .albumBox-grid-item:nth-of-type(4n)::before {
-    content: attr(data-count);
-    color: white;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(128, 128, 128, 0.8);
-  }
+.albumBox-container h2 {
+  padding: 0;
+  margin: 0;
+  color: hsl(0, 0%, 51%);
+  text-align: center;
+}
 
-  .albumBox-grid-item {
-    height: calc(var(--albumBox-item-size) / 2.2);
-    width: calc(var(--albumBox-item-size) / 2.2);
-    overflow: hidden;
-    border-radius: 20px;
-  }
+.albumBox-grid {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: var(--albumBox-item-size);
+  width: var(--albumBox-item-size);
+}
 
-  .albumBox-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.albumBox-grid-item:nth-of-type(4n) {
+  position: relative;
+}
+
+.albumBox-grid-item:nth-of-type(4n)::before {
+  content: attr(data-count);
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.8);
+}
+
+.albumBox-grid-item {
+  height: calc(var(--albumBox-item-size) / 2.2);
+  width: calc(var(--albumBox-item-size) / 2.2);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.albumBox-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
