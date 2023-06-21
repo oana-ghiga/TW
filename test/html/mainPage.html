@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <title>HeMa</title>
+</head>
+<body>
+    <header class="headerLogged">
+        <div class="headerContainer HC">
+            <div class="headerContents HC">
+                <div class="leftSide HC">
+                    <div class="logoContainer">
+                        <a href="mainPage.html">
+                            <img src="../images/logo.png" alt="logo" id="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="rightSide HC">
+                    <div class="searchBarContainer HC">
+                        <div class="searchBar">
+                            <input type="text" placeholder="Search" id="searchBar">
+                        </div>
+                    </div>
+                    <div class="searchButtonContainer HC">
+                        <img src="../images/search-icon.png" alt="search" id="search">
+                    </div>
+                    <div class="filterButtonContainer HC">
+                        <img src="../images/filter-button.png" alt="filter" id="filter">
+                    </div>
+                    <div class="aboutButtonContainer HC">
+                        <p>About</p>
+                    </div>
+                    <div class="albumsButtonContainer HC">
+                        <p>Albums</p>
+                    </div>
+                    <div class="profileButtonContainer HC">
+                        <p>Profile</p>
+                    </div>
+                    <div class="logoutButtonContainer HC">
+                        <p>Log out</p>
+                    </div>
+                    <div class="loginButtonContainer HC">
+                        <p>Log in</p>
+                    </div>
+                    <div class="signupButtonContainer HC">
+                        <p>Sign up</p>
+                    </div>
+                    <div class="dropdownContainer HC">
+                        <div class="dropdownButton HC">
+                            <img src="../images/dropdown-arrow.png" alt="dropdown-arrow" id="dropdown-arrow">
+                        </div>
+                        <div class="dropdownMenu shadow">
+                            <div>
+                                <a href="#" class="menuItem profile">Profile</a>
+                                <a href="#" class="menuItem albums">Albums</a>
+                                <a href="#" class="menuItem about">About</a>
+                                <a href="#" class="menuItem logout">Logout</a>
+                                <a href="#" class="menuItem login">Log in</a>
+                                <a href="#" class="menuItem signup">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="filterMenuContainer shadow">
+        <div class="filterMenu">
+            <div class="category">
+                <p>Color</p>
+                <ul>
+                    <li>Red</li>
+                    <li>White</li>
+                    <li>Green</li>
+                    <li>Yellow</li>
+                    <li>Purple</li>
+                    <li>Orange</li>
+                </ul>
+            </div>
+            <div class="category">
+                <p>Type</p>
+                <ul>
+                    <li>Medicinal</li>
+                    <li>Decorative</li>
+                </ul>
+            </div>
+            <div class="category">
+                <p>Climate</p>
+                <ul>
+                    <li>Tropical</li>
+                    <li>Subtropical</li>
+                    <li>Cold</li>
+                    <li>Temperate</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="photo_content">
+        <!-- <div class="spotlightContainer">
+            <div class="imageSectionContainer">
+
+            </div>
+            <div class="textSectionContainer">
+
+            </div>
+        </div>
+        <div class="spotlightContainer">
+            <div class="imageSectionContainer">
+        
+            </div>
+            <div class="textSectionContainer">
+        
+            </div>
+        </div> -->
+        <template id="image_template">
+            <div class="image_card">
+                <img class="lazy-image" data-src="" alt="">
+            </div>
+        </template>
+        <div class="image_grid"></div>
+    </div>
+    <script type="text/javascript" src="../javascript/script.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 // Database connection details
 $host = 'localhost';
 $username = 'root';
-$password = 'password';
+$password = 'root';
 $database = 'herbarium_db';
 
 // Create a new PDO instance
