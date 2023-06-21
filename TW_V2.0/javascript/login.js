@@ -21,6 +21,12 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             .then(data => {
                 // Handle the response from the backend
                 alert(data.message); // Display the response message
+                
+                // Checking if the login was successful
+                if (data.message === "Login successful") {
+                    // Redirect to mainPage
+                    window.location.href = "../html/mainPage.html";
+                }
             })
             .catch(error => {
                 console.error("Error:", error);
