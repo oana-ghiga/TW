@@ -377,7 +377,7 @@ body {
   margin: 65px auto;
   padding: 0;
   top: 80px;
-  width: 400px;
+  /* width: 400px; */
   left: 50%;
   transform: translateX(-50%);
   border-radius: 40px;
@@ -398,7 +398,7 @@ body {
 }
 
 #username, #password {
-  min-width: 300px;
+  width: 300px;
   padding-left: 10px;
   height: 3rem;
   border-radius: 10px;
@@ -491,6 +491,10 @@ body {
   .lazy-image {
     width: calc(95vw/2 - 10px);
   }
+
+  #username, #password {
+    width: 280px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -508,6 +512,10 @@ body {
     animation-delay: 0s;
     animation-fill-mode: forwards;
     width: 100%;
+  }
+
+  #username, #password {
+    width: 260px;
   }
 
   #searchBar {
