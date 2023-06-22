@@ -9,63 +9,95 @@
 </head>
 <body>
 <header class="headerLogged">
-    <div class="headerContainer HC">
-        <div class="headerContents HC">
-            <div class="leftSide HC">
-                <div class="logoContainer">
-                    <a href="mainPage.html">
-                        <img alt="logo" id="logo" src="../images/logo.png">
-                    </a>
-                </div>
-            </div>
-            <div class="rightSide HC">
-                <div class="searchBarContainer HC">
-                    <div class="searchBar">
-                        <input id="searchBar" placeholder="Search" type="text">
-                        <button class="filterButton" type="button">
-                            <img alt="filter" id="filterButton" src="../images/filter-button.png">
+        <div class="headerContainer HC">
+            <div class="headerContents HC">
+                <div class="leftSide HC">
+                    <div class="logoContainer">
+                        <a href="mainPage.html">
+                            <img src="../images/logo.png" alt="logo" id="logo">
+                        </a>
                     </div>
                 </div>
-                <div class="searchButtonContainer HC">
-                    <img alt="search" id="search" src="../images/search-icon.png">
-                </div>
-                <div class="aboutButtonContainer HC">
-                    <p>About</p>
-                </div>
-                <div class="albumsButtonContainer HC">
-                    <p>Albums</p>
-                </div>
-                <div class="profileButtonContainer HC">
-                    <p>Profile</p>
-                </div>
-                <div class="logoutButtonContainer HC">
-                    <p>Log out</p>
-                </div>
-                <div class="loginButtonContainer HC">
-                    <p>Log in</p>
-                </div>
-                <div class="signupButtonContainer HC">
-                    <p>Sign up</p>
-                </div>
-                <div class="dropdownContainer HC">
-                    <div class="dropdownButton HC">
-                        <img alt="dropdown-arrow" id="dropdown-arrow" src="../images/dropdown-arrow.png">
+                <div class="rightSide HC">
+                    <div class="searchBarContainer HC">
+                        <div class="searchBar">
+                            <input type="text" placeholder="Search" id="searchBar">
+                        </div>
                     </div>
-                    <div class="dropdownMenu shadow">
-                        <div>
-                            <a class="menuItem profile" href="#">Profile</a>
-                            <a class="menuItem albums" href="#">Albums</a>
-                            <a class="menuItem about" href="#">About</a>
-                            <a class="menuItem logout" href="#">Logout</a>
-                            <a class="menuItem login" href="#">Log in</a>
-                            <a class="menuItem signup" href="#">Sign up</a>
+                    <div class="searchButtonContainer HC">
+                        <img src="../images/search-icon.png" alt="search" id="search">
+                    </div>
+                    <div class="filterButtonContainer HC">
+                        <img src="../images/filter-button.png" alt="filter" id="filter">
+                    </div>
+                    <div class="aboutButtonContainer HC">
+                        <p>About</p>
+                    </div>
+                    <div class="albumsButtonContainer HC">
+                        <p>Albums</p>
+                    </div>
+                    <div class="profileButtonContainer HC">
+                        <p>Profile</p>
+                    </div>
+                    <div class="logoutButtonContainer HC">
+                        <p>Log out</p>
+                    </div>
+                    <div class="loginButtonContainer HC">
+                        <p>Log in</p>
+                    </div>
+                    <div class="signupButtonContainer HC">
+                        <p>Sign up</p>
+                    </div>
+                    <div class="dropdownContainer HC">
+                        <div class="dropdownButton HC">
+                            <img src="../images/dropdown-arrow.png" alt="dropdown-arrow" id="dropdown-arrow">
+                        </div>
+                        <div class="dropdownMenu shadow">
+                            <div>
+                                <a href="#" class="menuItem profile">Profile</a>
+                                <a href="#" class="menuItem albums">Albums</a>
+                                <a href="#" class="menuItem about">About</a>
+                                <a href="#" class="menuItem logout">Logout</a>
+                                <a href="#" class="menuItem login">Log in</a>
+                                <a href="#" class="menuItem signup">Sign up</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+    <div class="filterMenuContainer shadow">
+        <div class="filterMenu">
+            <div class="category">
+                <p>Color</p>
+                <ul>
+                    <li>Red</li>
+                    <li>White</li>
+                    <li>Green</li>
+                    <li>Yellow</li>
+                    <li>Purple</li>
+                    <li>Orange</li>
+                </ul>
+            </div>
+            <div class="category">
+                <p>Type</p>
+                <ul>
+                    <li>Medicinal</li>
+                    <li>Decorative</li>
+                </ul>
+            </div>
+            <div class="category">
+                <p>Climate</p>
+                <ul>
+                    <li>Tropical</li>
+                    <li>Subtropical</li>
+                    <li>Cold</li>
+                    <li>Temperate</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</header>
 
 
 <?php
