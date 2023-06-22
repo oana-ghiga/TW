@@ -4,6 +4,7 @@
 
 :root {
   font-family: 'Sarala', sans-serif;
+  --albumBox-item-size: 150px;
   --card_width: 250px;
   --card_width_mobile: calc(95vw/2);
   --card_border_radius: 15px;
