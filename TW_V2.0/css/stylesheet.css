@@ -540,6 +540,7 @@ body {
 .albumList {}
 
 .album {
+  margin-top: 80px;
   position: absolute;
   place-items: center;
   width: 98%;
