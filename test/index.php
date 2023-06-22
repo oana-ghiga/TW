@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Check if the user is logged in
+
 function getShuffledPlants()
 {
     // Connect to database

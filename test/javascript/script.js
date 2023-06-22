@@ -65,46 +65,10 @@ listItems.forEach(item => {
   });
 });
 
-// authenthication check section 
-const albumsButton = document.querySelector('.albumsButtonContainer');
-const profileButton = document.querySelector('.profileButtonContainer');
-const logoutButton = document.querySelector('.logoutButtonContainer');
-const loginButton = document.querySelector('.loginButtonContainer');
-const signupButton = document.querySelector('.signupButtonContainer');
-
-const menuProfile = document.querySelector('.profile');
-const menuAlbums = document.querySelector('.albums');
-const menuLogout = document.querySelector('.logout');
-const menuLogin = document.querySelector('.login');
-const menuSignup = document.querySelector('.signup');
-
-function checkAuth() {
-  if (isAuthenticated()) {
-    loginButton.style.display = 'none';
-    signupButton.style.display = 'none';
-    menuLogin.style.display = 'none';
-    menuSignup.style.display = 'none';
-  } else {
-    albumsButton.style.display = 'none';
-    profileButton.style.display = 'none';
-    logoutButton.style.display = 'none';
-    menuAlbums.style.display = 'none';
-    menuProfile.style.display = 'none';
-    menuLogout.style.display = 'none';
-  }
-}
-
-// mock function to check if the user is authenticated
-function isAuthenticated() {
-  return false;
-}
-
-checkAuth();
-
 // dynamic image loading section
 const imageGrid = document.querySelector('.image_grid');
 const imageTemplate = document.querySelector('#image_template');
-const card_types = ['small_card' , 'medium_card' , 'large_card'];
+const card_types = ['small_card', 'medium_card', 'large_card'];
 
 const observerOptions = {
   root: null,
@@ -135,44 +99,46 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 const images = [...Array(100).keys()].map(i => `https://placekitten.com/200/200?image=${i + 1}`);
 var idx = 0;
-images.forEach(image => {
-  const newImage = imageTemplate.content.cloneNode(true);
-  var imageCard = newImage.querySelector('.image_card');
-  const lazyImage = newImage.querySelector('.lazy-image');
-  
-  imageCard.classList.add(card_types[idx % 3]);
-  switch(card_types[idx % 3]) {
-    case 'small_card':
-      var card_height = rs.getPropertyValue('--card_small') * 10 - 30;
-      lazyImage.style.height = card_height + 'px';
-      break;
-    case 'medium_card':
-      var card_height = rs.getPropertyValue('--card_medium') * 10 - 30;
-      lazyImage.style.height = card_height + 'px';
-      break;
-    case 'large_card':
-      var card_height = rs.getPropertyValue('--card_large') * 10 - 30;
-      lazyImage.style.height = card_height + 'px';
-      break;
+try {
+  if (images && imageTemplate && imageTemplate.content) {
+    images.forEach(image => {
+      const newImage = imageTemplate.content.cloneNode(true);
+      var imageCard = newImage.querySelector('.image_card');
+      const lazyImage = newImage.querySelector('.lazy-image');
+
+      imageCard.classList.add(card_types[idx % 3]);
+      switch (card_types[idx % 3]) {
+        case 'small_card':
+          var card_height = rs.getPropertyValue('--card_small') * 10 - 30;
+          lazyImage.style.height = card_height + 'px';
+          break;
+        case 'medium_card':
+          var card_height = rs.getPropertyValue('--card_medium') * 10 - 30;
+          lazyImage.style.height = card_height + 'px';
+          break;
+        case 'large_card':
+          var card_height = rs.getPropertyValue('--card_large') * 10 - 30;
+          lazyImage.style.height = card_height + 'px';
+          break;
+      }
+      idx++;
+
+      lazyImage.dataset.src = image;
+
+      imageCard.addEventListener('click', () => {
+        // Open new page with enlarged image, description, and comment section
+        window.location.href = "../html/spotlightPage.html";
+      });
+
+      imageGrid.appendChild(newImage);
+      observer.observe(lazyImage);
+
+      imageGrid.appendChild(newImage);
+      observer.observe(lazyImage);
+    });
+  } else {
+    throw new Error('Images array is null');
   }
-  idx++;
-
-  lazyImage.dataset.src = image;
-
-  imageGrid.appendChild(newImage);
-  observer.observe(lazyImage);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} catch (error) {
+  
+}

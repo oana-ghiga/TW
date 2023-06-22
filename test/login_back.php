@@ -1,9 +1,15 @@
 <?php
+session_start();
 // Database connection details
 $host = 'localhost';
 $username = 'root';
 $password = 'root';
 $database = 'herbarium_db';
+
+
+$_SESSION['loggedin'] = false;
+$_SESSION['user_id'] = null;
+$log=$_SESSION['loggedin'];
 
 // Create a new PDO instance
 try {
@@ -19,20 +25,28 @@ $data = json_decode($jsonData, true);
 
 // Check if the required fields are present
 if (isset($data['username']) && isset($data['password'])) {
-    $username = $data['username'];
+    $inusername = $data['username'];
     $inpassword = $data['password'];
 
     // Prepare and execute the SQL query
-    $query = "SELECT * FROM users WHERE username = :username AND password = :password";
+    $query = "SELECT * FROM users WHERE username = :inusername AND password = :inpassword";
     $statement = $connection->prepare($query);
-    $statement->bindParam(':username', $username);
-    $statement->bindParam(':password', $inpassword);
+    $statement->bindParam(':inusername', $inusername);
+    $statement->bindParam(':inpassword', $inpassword);
     $statement->execute();
 
     // Check if a matching user was found
     $user = $statement->fetch(PDO::FETCH_ASSOC);
     if ($user) {
         $response = array('message' => 'Login successful');
+
+        // Assuming the login is successful and you have retrieved the user's information
+
+        $user_id = $user['user_id'];
+        $_SESSION['loggedin'] = true;
+        $_SESSION['user_id'] = $user_id;
+        $_SESSION['username'] = $inusername;
+        $log=$_SESSION['loggedin'];
     } else {
         $response = array('message' => 'Invalid username or password. Please register first.');
     }
@@ -45,4 +59,3 @@ header('Content-Type: application/json');
 
 // Convert the response array to JSON format and echo it
 echo json_encode($response);
-?>

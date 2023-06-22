@@ -20,6 +20,7 @@
   --color-dimgray: #565656;
   --color-black: #000;
   --color-darkgray: #b4b4b4;
+  --albumBox-item-size: 150px;
 }
 
 /* ----------- animations ------------ */
@@ -367,9 +368,9 @@ body {
   }
 }
 
-/*---------------loginPage-------------------*/
+/*---------------loginPage/registerPage-------------------*/
 
-.loginContainer {
+.loginContainer, .registerContainer {
   position: absolute;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -377,7 +378,7 @@ body {
   margin: 65px auto;
   padding: 0;
   top: 80px;
-  width: 400px;
+  /* width: 400px; */
   left: 50%;
   transform: translateX(-50%);
   border-radius: 40px;
@@ -385,20 +386,20 @@ body {
   text-align: center;
 }
 
-.loginContainer h2 {
+.loginContainer h2, .registerContainer h2 {
   font-size: 2.2rem;
   font-weight: 600;
   padding: 35px 35px 0;
   margin: 0;
 }
 
-.loginFormContents {
+.loginFormContents, .registerFormContents {
   padding: 35px;
   text-align: center;
 }
 
-#username, #password {
-  min-width: 300px;
+#username, #password, #email {
+  width: 300px;
   padding-left: 10px;
   height: 3rem;
   border-radius: 10px;
@@ -409,7 +410,7 @@ body {
   background-color: #F0EFF2;
 }
 
-#login {
+#login, #register {
   border-radius: 10px;
   border: none;
   font-size: 1.3em;
@@ -421,7 +422,7 @@ body {
   width: 7rem;
 }
 
-.loginButton {
+.loginButton, .registerButton {
   display: flex;
   padding: 1 1rem;
   margin-left: 15px;
@@ -491,6 +492,10 @@ body {
   .lazy-image {
     width: calc(95vw/2 - 10px);
   }
+
+  #username, #password, #email {
+    width: 280px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -508,6 +513,10 @@ body {
     animation-delay: 0s;
     animation-fill-mode: forwards;
     width: 100%;
+  }
+
+  #username, #password, #email {
+    width: 260px;
   }
 
   #searchBar {
