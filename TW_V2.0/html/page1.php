@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,4 +115,3 @@ for ($i = 1; $i <= ceil($total_images / 4); $i++) {
 <script src="../javascript/script.js" type="text/javascript"></script>
 </body>
 </html>
->>>>>>> 11b591e (responsivness para login aqui)

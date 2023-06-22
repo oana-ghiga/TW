@@ -367,9 +367,9 @@ body {
   }
 }
 
-/*---------------loginPage-------------------*/
+/*---------------loginPage/registerPage-------------------*/
 
-.loginContainer {
+.loginContainer, .registerContainer {
   position: absolute;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -385,19 +385,19 @@ body {
   text-align: center;
 }
 
-.loginContainer h2 {
+.loginContainer h2, .registerContainer h2 {
   font-size: 2.2rem;
   font-weight: 600;
   padding: 35px 35px 0;
   margin: 0;
 }
 
-.loginFormContents {
+.loginFormContents, .registerFormContents {
   padding: 35px;
   text-align: center;
 }
 
-#username, #password {
+#username, #password, #email {
   width: 300px;
   padding-left: 10px;
   height: 3rem;
@@ -409,7 +409,7 @@ body {
   background-color: #F0EFF2;
 }
 
-#login {
+#login, #register {
   border-radius: 10px;
   border: none;
   font-size: 1.3em;
@@ -421,7 +421,7 @@ body {
   width: 7rem;
 }
 
-.loginButton {
+.loginButton, .registerButton {
   display: flex;
   padding: 1 1rem;
   margin-left: 15px;
@@ -492,7 +492,7 @@ body {
     width: calc(95vw/2 - 10px);
   }
 
-  #username, #password {
+  #username, #password, #email {
     width: 280px;
   }
 }
@@ -514,7 +514,7 @@ body {
     width: 100%;
   }
 
-  #username, #password {
+  #username, #password, #email {
     width: 260px;
   }
 
