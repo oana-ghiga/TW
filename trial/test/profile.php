@@ -52,5 +52,29 @@ if ($user) {
 }
 ?>
 
+<!-- Button to generate RSS feed -->
+<button onclick="generateRSS()">Generate RSS</button>
+
+<a href="logout.php">Logout</a> <!-- Include a logout link to log out the user -->
+
+<script>
+    function generateRSS() {
+        // Send a request to the PHP script to generate the RSS feed
+        fetch("generate_rss.php", {
+            method: "GET"
+        })
+            .then(response => {
+                if (response.ok) {
+                    console.log("RSS feed generated successfully!");
+                    console.log(response.text());
+                } else {
+                    console.error("Error generating RSS feed");
+                }
+            })
+            .catch(error => {
+                console.error("Error generating RSS feed:", error);
+            });
+    }
+</script>
 </body>
 </html>

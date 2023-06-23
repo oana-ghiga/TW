@@ -9,7 +9,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     });
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '../html/test.php', true);
+    xhr.open('POST', '../test.php', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.onreadystatechange = function() {

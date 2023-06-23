@@ -1,23 +1,11 @@
 <?php
 session_start();
+require_once 'Database.php';
 // Database connection details
-$host = 'localhost';
-$username = 'root';
-$password = 'root';
-$database = 'herbarium_db';
-
 
 $_SESSION['loggedin'] = false;
 $_SESSION['user_id'] = null;
 $log=$_SESSION['loggedin'];
-
-// Create a new PDO instance
-try {
-    $connection = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
-}
 
 // Get the JSON data from the request
 $jsonData = file_get_contents('php://input');
@@ -29,15 +17,12 @@ if (isset($data['username']) && isset($data['password'])) {
     $inpassword = $data['password'];
 
     // Prepare and execute the SQL query
-    $query = "SELECT * FROM users WHERE username = :inusername AND password = :inpassword";
-    $statement = $connection->prepare($query);
-    $statement->bindParam(':inusername', $inusername);
-    $statement->bindParam(':inpassword', $inpassword);
-    $statement->execute();
+    $query = "SELECT * FROM users WHERE username = :inusername";
+
 
     // Check if a matching user was found
-    $user = $statement->fetch(PDO::FETCH_ASSOC);
-    if ($user) {
+    $user = Database::fetchOne($query, [':inusername' => $inusername]);
+    if ($user && password_verify($inpassword, $user['password'])) {
         $response = array('message' => 'Login successful');
 
         // Assuming the login is successful and you have retrieved the user's information

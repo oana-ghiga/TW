@@ -50,24 +50,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!-- HTML form for the change password page -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Change Password</title>
-</head>
-<body>
-<h2>Change Password</h2>
-<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <label for="username">Username:</label>
-    <input type="text" name="username" required><br><br>
-    <label for="current_password">Current Password:</label>
-    <input type="password" name="current_password" required><br><br>
-    <label for="new_password">New Password:</label>
-    <input type="password" name="new_password" required><br><br>
-    <label for="confirm_password">Confirm New Password:</label>
-    <input type="password" name="confirm_password" required><br><br>
-    <input type="submit" value="Change Password">
-</form>
-</body>
-</html>
+<!--HTML form for the change password page-->
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Change Password</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Change Password</h2>-->
+<!--<form method="POST" action="--><?php //echo htmlspecialchars($_SERVER["PHP_SELF"]); ?><!--">-->
+<!--    <label for="username">Username:</label>-->
+<!--    <input type="text" name="username" required><br><br>-->
+<!--    <label for="current_password">Current Password:</label>-->
+<!--    <input type="password" name="current_password" required><br><br>-->
+<!--    <label for="new_password">New Password:</label>-->
+<!--    <input type="password" name="new_password" required><br><br>-->
+<!--    <label for="confirm_password">Confirm New Password:</label>-->
+<!--    <input type="password" name="confirm_password" required><br><br>-->
+<!--    <input type="submit" value="Change Password">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
