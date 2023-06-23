@@ -58,9 +58,11 @@
     <section type="sa:Abstract" id="abstract" role="doc-abstract">
       <h2>1. Abstract</h2>
       <p>
-        HeMa - Digital Herbarium este o colecție online de specimene de plante pentru cercetarea științifică și
-        educație. Aplicația pune la dispoziție vasta colecție de plante într-un mediu online, accesibil pentru oricine
-        de pe glob. Utilizatorii pot învăța despre caracteristicile plantelor, habitatele lor, domenii de utilizare și
+        HeMa - Herbal Manager este un ierbar digital ce pune la dispoziţia utilizatorilor o multitudine de  specimene
+        de plante pentru cercetarea științifică, relaxare şi hobby sau educație.
+        Aplicația pune la dispoziție imagini cu plante, albume şi diverse features într-un mediu online, accesibil
+        pentru toate persoanele de pe glob.
+        Utilizatorii pot învăța despre caracteristicile plantelor, habitatele lor, domenii de utilizare și
         pot descoperi noi specii necunoscute de ei până atunci.
       </p>
     </section>
@@ -74,7 +76,7 @@
         principală a aplicației este de a susține cercetările științifice, educația și interesul general față de
         domeniul botanicii. Oferind o colecție vastă de plante, utilizatorii pot învăța caractericticile acestora,
         habitate și utilizări. Utilizatorii pot să adauge comentarii plantelor, contrbuind cu observații și adăugări
-        personale. In esență, aplicația HeMa facilitează învățarea și promovează conștientizare importanței plantelor
+        personale. În esență, aplicația HeMa facilitează învățarea și promovează conștientizare importanței plantelor
         în ecosistemul nostru.
       </p>
       <h3>2.2 Convențiile documentului</h3>
@@ -250,15 +252,18 @@
       </p>
       <h3>3.2 Funcționalitățile produsului</h3>
       <p>
-        Situl web ofera o serie de funcționalități care să-i ajute pe utilizatori să interacționeze cu colecțiile de
+        Situl web oferă o serie de funcționalități care îi ajută pe utilizatori să interacționeze cu colecțiile de
         plante în moduri variate. Utilizatorii pot crea albume personalizate, pot salva plante în aceste albuma și pot
-        să adauge comentarii plantelor. De asemenea, utilizatorii își pot crea un cont și se pot loga pentru a accesa
+        să adauge comentarii plantelor sau lasă un like.
+        De asemenea, utilizatorii își pot crea un cont și se pot loga pentru a accesa
         colecția lor de plante de pe orice platformă. Pagina principală a aplicației este compusă dintr-o varietate de
         poze cu plante, pe care userii pot da click pentru a vedea mai multe detalii și comentariile altor utilizatori
         despre acestea. Aplicația generează și albume tematice pentru utilizatori, cum ar fi un album de plante
         medicinale, de munte, etc. Utilizatorii pot căuta plante și filtra pagina principală, bazat pe diferite
         categorii de plante. Acest sistem este conceput pentru utilizatori de cu un nivel diferit de expertiză botanică,
-        pentru a facilita explorarea și învățarea botanicii.
+        pentru a facilita explorarea și învățarea botanicii. De asemenea, utilizatorii pot vedea topul plantelor din
+        cadrul sitului în funcţie de numărul de like-uri primite sau accesa din pagina de profil un flux de date RSS unic
+        cu topul plantelor deţinute de acel utilizator.
       </p>
       <h3>3.3 Tipuri de utilizatori și caracteristici</h3>
       <p>
@@ -268,9 +273,9 @@
       </p>
       <h3>3.4 Mediul de operare</h3>
       <p>
-        Situl web HeMa va fi o aplicație web, care poate fi accesată de pe orice browser modern, de pe desktop, laptop,
+        Situl web HeMa va fi o aplicație web, care poate fi accesată de pe orice browser, de pe desktop, laptop,
         tabletă sau telefon mobil. Aplicația va fi concepută pentru a fi compatibilă cu cele mai comune tehnologii web,
-        cum ar fi HTML5, CSS, JavaScript și NodeJS.
+        cum ar fi HTML5, CSS şi JavaScript.
       </p>
       <h3>3.5 Constrângeri de proiectare și implementare</h3>
       <p>
@@ -278,10 +283,9 @@
       </p>
       <ul>
         <li>
-          Aplicația trebuie să fie implementată folosing HTML, CSS, JavaScript, NodeJS și MySQL pentru baza de date,
+          Aplicația trebuie să fie implementată folosing HTML, CSS, JavaScript, PHP și MySQL pentru baza de date,
         </li>
         <li>
-          The website must be compatible with modern web browsers such as Google Chrome, Mozilla Firefox, and Safari,
           Aplicația web trebuie să fie compatibilă cu browsere web moderne, cum ar fi Google Chrome, Mozilla Firefox,
           Safari, Opera, etc.,
         </li>
@@ -289,10 +293,16 @@
           Aplicația trebuie să aiba un design responsive și adaptabil la diferite dimensiuni de ecran, incluzănd
           computerele desktop și telefoanele mobile,
         </li>
+        <li>
+          Aplicația trebuie să fie ușor de utilizat și să ofere o experiență plăcută utilizatorilor,
+        </li>
+        <li>
+          Aplicația trebuie să fie securizată și să nu permită accesul neautorizat la datele utilizatorilor,
+        </li>
       </ul>
       <h3>3.6 Documentația utilizatorului</h3>
       <p>
-        Utilizatorul va avea un ghid de utilizare cu privire la modul de utilizare a aplicației web.
+        Utilizatorul va avea un ghid de utilizare cu privire la modul de utilizare al aplicației web.
       </p>
       <h3>3.7 Ipoteze și dependențe</h3>
       <ul>
@@ -302,7 +312,10 @@
         </li>
         <li>
           Pentru ca aplicația să funcționeze este nevoie de un browser web care să suporte tehnologiile HTML5, CSS,
-          JavaScript și NodeJS.
+          JavaScript și PHP.
+        </li>
+        <li>
+          Pentru a putea folosi aplicația, utilizatorul trebuie să aibă un device de pe care o poate accesa.
         </li>
       </ul>
     </section>
@@ -313,13 +326,15 @@
         <li>
           <h4>Pagina principală</h4>
           <figure typeof="sa:image">
-            <img src="../img/main.png" alt="Pagina principala">
+            <img src="../main.png" alt="Pagina principala">
             <figcaption>Pagina principală</figcaption>
           </figure>
           <p>
             Aceasta este prima pagină pe care o accesează utilizatorul. Aici sunt prezente imagini cu plante pe care
             utilizatorul le poate adăuga colecției sale. Din această pagină utilizatorul poate ajunge la pagina de
-            albume sau se se poate înregistra/loga accesând pagina Profil.
+            albume sau se se poate înregistra/loga, poate filtra imaginile in functie de tagurile dorite, poate vedea
+            topul plantelor, poate căuta o plantă în funcție de numele ştiinţific sau vizualiza detalii generale despre
+            aplicaţie.
           </p>
         </li>
         <li>
