@@ -204,4 +204,6 @@ require_once basePath('/templates/filter.php');
         window.location.href = "/rss";
     }
 </script>
+<script type="text/javascript" src="/assets/javascript/script.js"></script>
+<script type="text/javascript" src="/assets/javascript/login.js"></script>
 </html>

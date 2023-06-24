@@ -35,10 +35,10 @@
                 <div class="logoutButtonContainer HC" onclick="window.location.href = '/logout'">
                     <p>Log out</p>
                 </div>
-                <div class="loginButtonContainer HC onclick="window.location.href = '/login'">
+                <div class="loginButtonContainer HC" onclick="window.location.href = '/login'">
                 <p>Log in</p>
             </div>
-            <div class="signupButtonContainer HC onclick="window.location.href = '/register'"">
+            <div class="signupButtonContainer HC" onclick="window.location.href = '/register'">
             <p>Sign up</p>
         </div>
         <div class="dropdownContainer HC">

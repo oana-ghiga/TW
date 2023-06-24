@@ -34,6 +34,6 @@ require_once basePath('/templates/filter.php');
     </template>
     <div class="image_grid"></div>
 </div>
-<script type="text/javascript" src="assets/javascript/script.js"></script>
+<script type="text/javascript" src="/assets/javascript/script.js"></script>
 </body>
 </html>

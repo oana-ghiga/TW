@@ -29,7 +29,7 @@ require_once basePath('/templates/filter.php');
     </div>
 </div>
 </body>
-<script type="text/javascript" src="assets/javascript/script.js"></script>
-<script type="text/javascript" src="assets/javascript/login.js"></script>
+<script type="text/javascript" src="/assets/javascript/script.js"></script>
+<script type="text/javascript" src="/assets/javascript/login.js"></script>
 
 </html>

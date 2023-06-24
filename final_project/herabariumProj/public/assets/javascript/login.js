@@ -26,7 +26,7 @@ function checkAuth() {
       menuProfile.style.display = 'none';
       menuLogout.style.display = 'none';
     }
-  }
+}
 
 checkAuth();
 

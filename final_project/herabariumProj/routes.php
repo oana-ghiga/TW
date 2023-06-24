@@ -1,6 +1,6 @@
 <?php
 
-$router->get('/', 'controllers/banana.php');
+$router->get('/', 'controllers/meow.php');
 $router->get('/login', 'controllers/login.php');
 $router->get('/register', 'controllers/register.php');
 $router->get('/password', 'controllers/password.php');

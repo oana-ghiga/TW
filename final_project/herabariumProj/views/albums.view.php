@@ -57,7 +57,7 @@ require_once basePath('/templates/filter.php');
     </div>
 </div>
 
-<script src="../javascript/script.js" type="text/javascript"></script>
+<script src="/assets/javascript/script.js" type="text/javascript"></script>
 <script type="text/javascript">
     function showAlbumContent(albumId) {
         // Open new page or perform desired action for the selected album
