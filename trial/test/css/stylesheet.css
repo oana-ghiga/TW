@@ -382,7 +382,7 @@ body {
   text-align: center;
 }
 
-#username, #password, #email {
+#username, #password, #email, #current_password, #new_password, #confirm_password {
   width: 300px;
   padding-left: 10px;
   height: 3rem;
