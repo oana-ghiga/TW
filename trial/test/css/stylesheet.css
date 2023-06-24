@@ -381,6 +381,12 @@ body {
   padding: 35px;
   text-align: center;
 }
+   
+.registerFormContents {
+  padding: 35px;
+  padding-top: 0;
+  text-align: center;
+}
 
 #username, #password, #email, #current_password, #new_password, #confirm_password {
   width: 300px;
@@ -394,7 +400,7 @@ body {
   background-color: #F0EFF2;
 }
 
-#login, #register {
+#login, #register, #pdf-button, #csv-button {
   border-radius: 10px;
   border: none;
   font-size: 1.3em;
@@ -404,6 +410,18 @@ body {
   cursor: pointer;
   height: 2.5rem;
   width: 7rem;
+}
+
+#pdf-button, #csv-button {
+  border-radius: 10px;
+  border: none;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #F0EFF2;
+  background-color: var(--color-green-200);
+  cursor: pointer;
+  width: 7rem;
+  height: auto;
 }
 
 .loginButton, .registerButton {
