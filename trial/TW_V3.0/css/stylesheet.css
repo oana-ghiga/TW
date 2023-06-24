@@ -145,7 +145,7 @@
 }
 
 #searchBar {
-  width: 40vw;
+  width: 35vw;
   height: 2rem;
   border-radius: 20px;
   border: none;
@@ -176,7 +176,8 @@
 .searchButtonContainer,
 .aboutButtonContainer,
 .albumsButtonContainer,
-.profileButtonContainer {
+.profileButtonContainer,
+.topButtonContainer {
   display: flex;
   text-align: center;
   height: 40px;
@@ -534,7 +535,8 @@ body {
   .profileButtonContainer,
   .logoutButtonContainer,
   .loginButtonContainer,
-  .signupButtonContainer {
+  .signupButtonContainer,
+  .topButtonContainer {
     display: none;
   }
 

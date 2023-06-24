@@ -2,7 +2,7 @@
 
 // Create a connection to the database
 $host = 'localhost';
-$user = 'root';
+$user = 'roossst';
 $password = 'root';
 $database = 'herbarium_db';
 

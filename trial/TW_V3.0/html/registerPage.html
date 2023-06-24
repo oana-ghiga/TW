@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-    <title>Login Page</title>
+    <title>Registration Page</title>
 </head>
-
 <body>
     <header class="headerLogged">
         <div class="headerContainer HC">
@@ -31,9 +29,6 @@
                     </div>
                     <div class="filterButtonContainer HC">
                         <img src="../images/filter-button.png" alt="filter" id="filter">
-                    </div>
-                    <div class="aboutButtonContainer HC">
-                        <p>About</p>
                     </div>
                     <div class="aboutButtonContainer HC">
                         <p>About</p>
@@ -103,24 +98,26 @@
             </div>
         </div>
     </div>
-    <div class="loginContainer shadow">
-            <h2>Login</h2>
-            <div class="loginFormContents">
-                <form id="loginForm">
-                    <div class="inputField">
-                        <input type="text" id="username" name="username" placeholder="Username" required><br><br>
-                    </div>
-                    <div class="inputField">
-                        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-                    </div>
-                    <div class="loginButton">
-                        <input type="submit" id="login" value="Sign In">
-                    </div>
-                </form>
-            </div>
-    </div>
+    <div class="registerContainer shadow">
+        <h2>Register</h2>
+        <div class="registerFormContents">
+            <form id="registrationForm" >
+                <div class="inputField">
+                    <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+                </div>
+                <div class="inputField">
+                    <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+                </div>
+                <div class="inputField">
+                    <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                </div>
+                <div class="registerButton">
+                    <input type="submit" id="register" value="Register">
+                </div>
+            </form>
+        </div>
+</div>
 </body>
 <script type="text/javascript" src="../javascript/script.js"></script>
-<script type="text/javascript" src="../javascript/login.js"></script>
-
+<script type="text/javascript" src="../javascript/register.js"></script>
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+echo "Hello World!";
 
 function getShuffledPlants()
 {
@@ -40,8 +41,10 @@ if (isset($_SESSION['logged_in'])) {
     // Fetch shuffled plant images from the database
     $plants = getShuffledPlants();
 
+    $phpVariable = "Haha Suckers";
     // Render the main page with shuffled plant images
     include 'main.php';
+    echo "<script>var jsVariable = '" . $phpVariable . "';</script>";
 
 } else {
     // Redirect to the login page

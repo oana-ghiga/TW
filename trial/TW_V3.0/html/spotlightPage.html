@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-    <title>Login Page</title>
+    <title>Spotlight</title>
 </head>
 
 <body>
@@ -31,9 +31,6 @@
                     </div>
                     <div class="filterButtonContainer HC">
                         <img src="../images/filter-button.png" alt="filter" id="filter">
-                    </div>
-                    <div class="aboutButtonContainer HC">
-                        <p>About</p>
                     </div>
                     <div class="aboutButtonContainer HC">
                         <p>About</p>
@@ -103,24 +100,57 @@
             </div>
         </div>
     </div>
-    <div class="loginContainer shadow">
-            <h2>Login</h2>
-            <div class="loginFormContents">
-                <form id="loginForm">
-                    <div class="inputField">
-                        <input type="text" id="username" name="username" placeholder="Username" required><br><br>
-                    </div>
-                    <div class="inputField">
-                        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-                    </div>
-                    <div class="loginButton">
-                        <input type="submit" id="login" value="Sign In">
-                    </div>
-                </form>
+    <div class="spotlight-container shadow">
+        <div class="enlarged-image">
+            <img class="spotlight-image" src="" alt="Enlarged Image">
+        </div>
+        <div class="plant-details">
+            <div class="plant-description">
+                <h2>Image Description</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida aliquet nisl, ac blandit nulla
+                    fringilla ut.</p>
             </div>
-    </div>
+            <div class="plant-comments">
+                <div class="comment-list">
+                    <div class="comments-container">
+                        <div class="comment">
+                            <div class="comment-header">
+                                <span class="comment-author">John Doe</span>
+                                <span class="comment-date">June 1, 2023</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>This is the first comment.</p>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <div class="comment-header">
+                                <span class="comment-author">Jane Smith</span>
+                                <span class="comment-date">June 2, 2023</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>This is the second comment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-comment-box">
+                        <textarea placeholder="Leave a comment"></textarea>
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="photo_content">
+        <template id="image_template">
+            <div class="image_card">
+                <img class="lazy-image" data-src="" alt="">
+            </div>
+        </template>
+        <div class="image_grid"></div>
+    </div> -->
+        <script type="text/javascript" src="../javascript/script.js"></script>
+        <script type="text/javascript" src="../javascript/login.js"></script>
+        <script type="text/javascript" src="../javascript/spotlight.js"></script>
 </body>
-<script type="text/javascript" src="../javascript/script.js"></script>
-<script type="text/javascript" src="../javascript/login.js"></script>
 
 </html>

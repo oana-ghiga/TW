@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-    <title>Login Page</title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../css/stylesheet.css" rel="stylesheet" type="text/css">
+    <title>HeMa</title>
 </head>
-
 <body>
-    <header class="headerLogged">
+<header class="headerLogged">
         <div class="headerContainer HC">
             <div class="headerContents HC">
                 <div class="leftSide HC">
@@ -31,9 +29,6 @@
                     </div>
                     <div class="filterButtonContainer HC">
                         <img src="../images/filter-button.png" alt="filter" id="filter">
-                    </div>
-                    <div class="aboutButtonContainer HC">
-                        <p>About</p>
                     </div>
                     <div class="aboutButtonContainer HC">
                         <p>About</p>
@@ -103,24 +98,52 @@
             </div>
         </div>
     </div>
-    <div class="loginContainer shadow">
-            <h2>Login</h2>
-            <div class="loginFormContents">
-                <form id="loginForm">
-                    <div class="inputField">
-                        <input type="text" id="username" name="username" placeholder="Username" required><br><br>
-                    </div>
-                    <div class="inputField">
-                        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-                    </div>
-                    <div class="loginButton">
-                        <input type="submit" id="login" value="Sign In">
-                    </div>
-                </form>
-            </div>
-    </div>
-</body>
-<script type="text/javascript" src="../javascript/script.js"></script>
-<script type="text/javascript" src="../javascript/login.js"></script>
 
+
+<?php
+$client_id = "6i4V8LkN5O6RNc67YOY4gssx0AFh2Urw738Xur2TKPY";
+$per_page = 30;
+$total_images = 60; //the bigger number, the laggier, so modify at your own risk xd
+$query = "flower";
+$pages = ceil($total_images / $per_page);
+
+$images = array();
+
+for ($page = 1; $page <= $pages; $page++) {
+    $url = "https://api.unsplash.com/search/photos?page=$page&per_page=$per_page&query=$query&client_id=$client_id";
+    $result = json_decode(file_get_contents($url));
+    $images = array_merge($images, $result->results);
+}
+$images = array_slice($images, 0, $total_images);
+
+//album names array from storage, might have smt to do with db later
+for ($i = 1; $i <= ceil($total_images / 4); $i++) {
+    $albumNames[] = "Album " . $i;
+}
+?>
+
+<div class="content">
+    <div class="albumList">
+        <div class="album">
+            <?php foreach (array_chunk($images, 4) as $key => $values) { ?>
+                <div class="albumBox-container">
+                    <div class="albumBox-grid">
+                        <?php foreach ($values as $value) {
+                            $count = rand(1, 10);
+                            ?>
+                            <div class="albumBox-grid-item" data-count="+<?php echo $count; ?>">
+                                <img src="<?php echo $value->urls->regular; ?>"
+                                     alt="<?php echo $value->description; ?>">
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <h2><?php echo $albumNames[$key]; ?></h2>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+
+<script src="../javascript/script.js" type="text/javascript"></script>
+</body>
 </html>

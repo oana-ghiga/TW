@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once 'Database.php';
+
+echo "hello";
 // Database connection details
 
 $_SESSION['loggedin'] = false;

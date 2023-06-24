@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-    <title>Login Page</title>
+    <title>HeMa</title>
 </head>
-
 <body>
+    <?php include '../../test/index.php'; ?>
     <header class="headerLogged">
         <div class="headerContainer HC">
             <div class="headerContents HC">
@@ -35,14 +34,14 @@
                     <div class="aboutButtonContainer HC">
                         <p>About</p>
                     </div>
-                    <div class="aboutButtonContainer HC">
-                        <p>About</p>
-                    </div>
                     <div class="albumsButtonContainer HC">
                         <p>Albums</p>
                     </div>
                     <div class="profileButtonContainer HC">
                         <p>Profile</p>
+                    </div>
+                    <div class="topButtonContainer HC">
+                        <p>Top</p>
                     </div>
                     <div class="logoutButtonContainer HC">
                         <p>Log out</p>
@@ -62,6 +61,7 @@
                                 <a href="#" class="menuItem profile">Profile</a>
                                 <a href="#" class="menuItem albums">Albums</a>
                                 <a href="#" class="menuItem about">About</a>
+                                <a href="#" class="menuItem about">Top</a>
                                 <a href="#" class="menuItem logout">Logout</a>
                                 <a href="#" class="menuItem login">Log in</a>
                                 <a href="#" class="menuItem signup">Sign up</a>
@@ -103,24 +103,31 @@
             </div>
         </div>
     </div>
-    <div class="loginContainer shadow">
-            <h2>Login</h2>
-            <div class="loginFormContents">
-                <form id="loginForm">
-                    <div class="inputField">
-                        <input type="text" id="username" name="username" placeholder="Username" required><br><br>
-                    </div>
-                    <div class="inputField">
-                        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-                    </div>
-                    <div class="loginButton">
-                        <input type="submit" id="login" value="Sign In">
-                    </div>
-                </form>
-            </div>
-    </div>
-</body>
-<script type="text/javascript" src="../javascript/script.js"></script>
-<script type="text/javascript" src="../javascript/login.js"></script>
+    <div class="photo_content">
+        <!-- <div class="spotlightContainer">
+            <div class="imageSectionContainer">
 
+            </div>
+            <div class="textSectionContainer">
+
+            </div>
+        </div>
+        <div class="spotlightContainer">
+            <div class="imageSectionContainer">
+        
+            </div>
+            <div class="textSectionContainer">
+        
+            </div>
+        </div> -->
+        <template id="image_template">
+            <div class="image_card">
+                <img class="lazy-image" data-src="" alt="">
+            </div>
+        </template>
+        <div class="image_grid"></div>
+    </div>
+    <script type="text/javascript" src="../javascript/script.js"></script>
+    <script type="text/javascript" src="../javascript/login.js"></script>
+</body>
 </html>

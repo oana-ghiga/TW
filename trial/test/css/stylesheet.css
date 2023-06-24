@@ -4,6 +4,7 @@
 
 :root {
   font-family: 'Sarala', sans-serif;
+  --albumBox-item-size: 150px;
   --card_width: 250px;
   --card_width_mobile: calc(95vw/2);
   --card_border_radius: 15px;
@@ -20,7 +21,6 @@
   --color-dimgray: #565656;
   --color-black: #000;
   --color-darkgray: #b4b4b4;
-  --albumBox-item-size: 150px;
 }
 
 /* ----------- animations ------------ */
@@ -336,38 +336,6 @@ body {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
-  .headerContents {
-    display: flex;
-    margin: 0;
-    /* justify-content: space-between; */
-    padding: 0 10px;
-  }
-
-  .aboutButtonContainer,
-  .albumsButtonContainer,
-  .profileButtonContainer,
-  .logoutButtonContainer,
-  .loginButtonContainer,
-  .signupButtonContainer {
-    display: none;
-  }
-
-  .dropdownContainer {
-    order: 1;
-    display: flex;
-  }
-
-  .dropdownButton {
-    display: flex;
-  }
-
-  .filterMenuContainer {
-    max-height: calc(100vh - 100px);
-    width: 50%;
-  }
-}
-
 /*---------------loginPage/registerPage-------------------*/
 
 .loginContainer, .registerContainer {
@@ -430,6 +398,81 @@ body {
   justify-content: center;
 }
 
+/*--------------- Spotlight -------------------*/
+
+.spotlight-container {
+  width: 700px;
+  padding: 10px;
+  position: absolute;
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-whitesmoke-100);
+  border-radius: 40px;
+}
+.enlarged-image {
+  flex: 1;
+  max-width: 50%;
+}
+.enlarged-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 40px;
+}
+.plant-details {
+  width: 50%;
+  flex: 1;
+  padding-left: 20px;
+  justify-content: space-between;
+}
+.plant-details h2 {
+  margin-top: 0;
+}
+.plant-details p {
+  margin-top: 10px;
+}
+.plant-comments {
+  margin-top: 20px;
+}
+.add-comment-box textarea {
+  position: absolute;
+  width: 220px;
+  resize: none;
+  bottom: 10px;
+  height: 2rem;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #828282;
+  background-color: #F0EFF2;
+  line-height: 2rem;
+}
+.add-comment-box button {
+  position: absolute;
+  bottom: 10px;
+  height: 2rem;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F0EFF2;
+  background-color: var(--color-green-200);
+  left: 250px;
+}
+
+.add-comment-box {
+  position: absolute;
+  bottom: 0px;
+  width: 300px;
+}
+
 /* AICI  */
 
 .photo_content {
@@ -476,6 +519,108 @@ body {
   background-color: #F0EFF2;
   object-fit: cover;
   border-radius: inherit;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .headerContents {
+    display: flex;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .aboutButtonContainer,
+  .albumsButtonContainer,
+  .profileButtonContainer,
+  .logoutButtonContainer,
+  .loginButtonContainer,
+  .signupButtonContainer,
+  .topButtonContainer {
+    display: none;
+  }
+
+  .dropdownContainer {
+    order: 1;
+    display: flex;
+  }
+
+  .dropdownButton {
+    display: flex;
+  }
+
+  .filterMenuContainer {
+    max-height: calc(100vh - 100px);
+    width: 50%;
+  }
+
+  /* --------------- Spotlight media 768 -----------------*/
+
+  .spotlight-container {
+    width: 95vw;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .enlarged-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .enlarged-image img {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .plant-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .plant-details h2 {
+    margin-top: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .plant-details p {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+  }
+
+  .plant-comments {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .add-comment-box textarea {
+    position: relative;
+  }
+
+  .add-comment-box button {
+    left: auto;
+    position: relative;
+    height: 2rem;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #F0EFF2;
+    background-color: var(--color-green-200);
+  }
+  
+  .add-comment-box {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -529,6 +674,7 @@ body {
     position: absolute;
     top: 80px;
     right: 2.5vw;
+    padding-top: 20px;
   }
 }
 
@@ -537,9 +683,8 @@ body {
   overflow-x: hidden;
 }
 
-.albumList {}
-
 .album {
+  margin-top: 80px;
   position: absolute;
   place-items: center;
   width: 98%;
