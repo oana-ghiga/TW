@@ -339,15 +339,15 @@ body {
 
 /*---------------loginPage/registerPage-------------------*/
 
-.loginContainer, .registerContainer {
+.loginContainer, .registerContainer, .presentationContainer {
   position: absolute;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  margin: 65px auto;
-  padding: 0;
+  margin-top: 80px;
+  padding: 10px;
   top: 80px;
-  /* width: 400px; */
+  width: 400px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 40px;

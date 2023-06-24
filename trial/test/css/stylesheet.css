@@ -354,6 +354,22 @@ body {
   text-align: center;
 }
 
+.presentationContainer {
+  position: absolute;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  margin: 65px auto;
+  padding: 10px;
+  top: 80px;
+  /* width: 400px; */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 40px;
+  background-color: var(--color-whitesmoke-100);
+  text-align: center;
+}
+
 .loginContainer h2, .registerContainer h2 {
   font-size: 2.2rem;
   font-weight: 600;
