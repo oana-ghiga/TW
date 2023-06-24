@@ -97,48 +97,66 @@ var rs = getComputedStyle(r);
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-const images = [...Array(100).keys()].map(i => `https://placekitten.com/200/200?image=${i + 1}`);
+// Update the images array with the backend endpoint URL
+const endpoint = 'http://8080/mainPage.php';
+const mappedImages = [];
+
 var idx = 0;
-try {
-  if (images && imageTemplate && imageTemplate.content) {
-    images.forEach(image => {
-      const newImage = imageTemplate.content.cloneNode(true);
-      var imageCard = newImage.querySelector('.image_card');
-      const lazyImage = newImage.querySelector('.lazy-image');
+fetch(endpoint)
+  .then(response => response.json())
+  .then(data => {
+    const mappedImages = data.map(plant => ({
+      id: plant.id,
+      image_link: plant.image_link
+    }));
 
-      imageCard.classList.add(card_types[idx % 3]);
-      switch (card_types[idx % 3]) {
-        case 'small_card':
-          var card_height = rs.getPropertyValue('--card_small') * 10 - 30;
-          lazyImage.style.height = card_height + 'px';
-          break;
-        case 'medium_card':
-          var card_height = rs.getPropertyValue('--card_medium') * 10 - 30;
-          lazyImage.style.height = card_height + 'px';
-          break;
-        case 'large_card':
-          var card_height = rs.getPropertyValue('--card_large') * 10 - 30;
-          lazyImage.style.height = card_height + 'px';
-          break;
-      }
-      idx++;
-
-      lazyImage.dataset.src = image;
-
-      imageCard.addEventListener('click', () => {
-        // Open new page with enlarged image, description, and comment section
-        window.location.href = "../html/spotlightPage.html";
-      });
-
-      imageGrid.appendChild(newImage);
-      observer.observe(lazyImage);
-
-      imageGrid.appendChild(newImage);
-      observer.observe(lazyImage);
-    });
-  } else {
-    throw new Error('Images array is null');
-  }
-} catch (error) {
+    if (mappedImages && imageTemplate && imageTemplate.content) {
+      mappedImages.forEach(plant => {
+        const id = plant.id;
+        const imageLink = plant.image_link;
+        const newImage = imageTemplate.content.cloneNode(true);
+        var imageCard = newImage.querySelector('.image_card');
+        const lazyImage = newImage.querySelector('.lazy-image');
   
-}
+        imageCard.classList.add(card_types[idx % 3]);
+        switch (card_types[idx % 3]) {
+          case 'small_card':
+            var card_height = rs.getPropertyValue('--card_small') * 10 - 30;
+            lazyImage.style.height = card_height + 'px';
+            break;
+          case 'medium_card':
+            var card_height = rs.getPropertyValue('--card_medium') * 10 - 30;
+            lazyImage.style.height = card_height + 'px';
+            break;
+          case 'large_card':
+            var card_height = rs.getPropertyValue('--card_large') * 10 - 30;
+            lazyImage.style.height = card_height + 'px';
+            break;
+        }
+        idx++;
+  
+        lazyImage.dataset.src = imageLink;
+  
+        imageCard.addEventListener('click', () => {
+          // Open new page with enlarged image, description, and comment section
+          const imageSrc = images.findIndex((image) => image === event.target.dataset.src);
+          if (clickedIdx !== -1) {
+  
+            const url = `../html/spotlightPage.html?imageSrc=${encodeURIComponent(imageSrc)}&imageId=${encodeURIComponent(imageId)}`;
+            window.location.href = url;
+          }
+        });
+  
+        imageGrid.appendChild(newImage);
+        observer.observe(lazyImage);
+  
+        imageGrid.appendChild(newImage);
+        observer.observe(lazyImage);
+      });
+    } else {
+      throw new Error('Images array is null');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });

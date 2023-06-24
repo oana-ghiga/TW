@@ -457,12 +457,48 @@ body {
   display: block;
   border-radius: 40px;
 }
+
+.like-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
 .plant-details {
   width: 50%;
   flex: 1;
   padding-left: 20px;
+  margin-bottom: 45px;
+  height: auto;
   justify-content: space-between;
+  overflow: scroll;
 }
+
+.album-add-button button {
+  border-radius: 20px;
+  height: 1.5rem;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-dimgray);
+  background-color: #F0EFF2;
+  cursor: pointer;
+}
+
+.like-button button {
+  border-radius: 20px;
+  height: 1.5rem;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F0EFF2;
+  background-color: var(--color-green-200);
+  cursor: pointer;
+}
+
 .plant-details h2 {
   margin-top: 0;
 }
@@ -499,6 +535,7 @@ body {
   color: #F0EFF2;
   background-color: var(--color-green-200);
   left: 250px;
+  cursor: pointer;
 }
 
 .add-comment-box {
@@ -610,6 +647,7 @@ body {
     flex-direction: column;
     width: 100%;
     padding-left: 0;
+    margin-bottom: 0;
   }
 
   .plant-details h2 {
