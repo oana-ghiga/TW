@@ -19,15 +19,18 @@ const likeButton = document.querySelector('.like-button');
 const likesCountElement = document.getElementById('likesCount');
 likesCountElement.textContent = updatedLikesCount;
 
-const endpoint = 'http://8080/spotlightPage.php'; // TODO
-fetch(`your-api-endpoint?plantId=${plantId}`)
+const endpoint = '/plant/${plantId}';
+fetch(endpoint)
   .then(response => response.json())
   .then(data => {
-    // Handle the response data
+    var plantName = data.name;
+    var updatedLikesCount = data.likes;
     console.log(data);
   })
   .catch(error => {
     // Handle any errors
     console.error(error);
-  });
+});
+
+
 
