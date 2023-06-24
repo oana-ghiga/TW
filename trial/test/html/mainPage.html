@@ -8,6 +8,7 @@
     <title>HeMa</title>
 </head>
 <body>
+    <?php include '../../test/index.php'; ?>
     <header class="headerLogged">
         <div class="headerContainer HC">
             <div class="headerContents HC">
@@ -39,6 +40,9 @@
                     <div class="profileButtonContainer HC">
                         <p>Profile</p>
                     </div>
+                    <div class="topButtonContainer HC">
+                        <p>Top</p>
+                    </div>
                     <div class="logoutButtonContainer HC">
                         <p>Log out</p>
                     </div>
@@ -57,6 +61,7 @@
                                 <a href="#" class="menuItem profile">Profile</a>
                                 <a href="#" class="menuItem albums">Albums</a>
                                 <a href="#" class="menuItem about">About</a>
+                                <a href="#" class="menuItem about">Top</a>
                                 <a href="#" class="menuItem logout">Logout</a>
                                 <a href="#" class="menuItem login">Log in</a>
                                 <a href="#" class="menuItem signup">Sign up</a>
@@ -68,35 +73,40 @@
         </div>
     </header>
     <div class="filterMenuContainer shadow">
-        <div class="filterMenu">
-            <div class="category">
-                <p>Color</p>
-                <ul>
-                    <li>Red</li>
-                    <li>White</li>
-                    <li>Green</li>
-                    <li>Yellow</li>
-                    <li>Purple</li>
-                    <li>Orange</li>
-                </ul>
-            </div>
-            <div class="category">
-                <p>Type</p>
-                <ul>
-                    <li>Medicinal</li>
-                    <li>Decorative</li>
-                </ul>
-            </div>
-            <div class="category">
-                <p>Climate</p>
-                <ul>
-                    <li>Tropical</li>
-                    <li>Subtropical</li>
-                    <li>Cold</li>
-                    <li>Temperate</li>
-                </ul>
-            </div>
-        </div>
+      <div class="filterMenu">
+          <div class="category">
+              <p>Pylum</p>
+              <ul>
+                  <li>Tracheopyta</li>
+                  <li>Ascomycota</li>
+                  <li>Basidiomycota</li>
+              </ul>
+          </div>
+          <div class="category">
+              <p>Order</p>
+              <ul>
+                  <li>Solanles</li>
+                  <li>Sapindales</li>
+          <li>Rosales</li>
+              </ul>
+          </div>
+          <div class="category">
+              <p>Family</p>
+              <ul>
+                  <li>Apiaceae</li>
+                  <li>Cannabaceae</li>
+                  <li>Sapindaceae</li>
+              </ul>
+          </div>
+      <div class="category">
+              <p>Genus</p>
+              <ul>
+                  <li>Conium</li>
+                  <li>Humulus</li>
+                  <li>Koelreuteria</li>
+              </ul>
+          </div>
+      </div>
     </div>
     <div class="photo_content">
         <!-- <div class="spotlightContainer">

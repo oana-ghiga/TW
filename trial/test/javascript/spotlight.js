@@ -3,7 +3,7 @@ const spotlightImage = document.querySelector('.spotlight-image');
 // Retrieve the value of the 'imageSrc' parameter from the URL
 const urlParams = new URLSearchParams(window.location.search);
 const imageSrc = urlParams.get('imageSrc');
-const imageId = urlParams.get('imageId');
+const plantId = urlParams.get('imageId');
 
 // Use the image source as needed in your page
 console.log(imageSrc);
@@ -18,4 +18,16 @@ const likeButton = document.querySelector('.like-button');
 
 const likesCountElement = document.getElementById('likesCount');
 likesCountElement.textContent = updatedLikesCount;
+
+const endpoint = 'http://8080/spotlightPage.php'; // TODO
+fetch(`your-api-endpoint?plantId=${plantId}`)
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
 
